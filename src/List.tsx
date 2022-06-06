@@ -1,18 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FilterType, TaskType} from "./App";
 
 
 type PropsType = {
     title: string
     tasks: Array<TaskType>
-    removeTask: (id: number) => void
-    setFilter: (e: FilterType) => void
+    setTasks: (el: Array<TaskType>) => void
 }
 
 export function List(props: PropsType) {
 
+    const [filter, setFilter] = useState<FilterType>('all')
+
+    const removeTask = (id: number) => {
+        let stateTasks = props.tasks.filter((el) => el.id !== id)
+        props.setTasks(stateTasks)
+
+    }
+
+    let filteredTasks = props.tasks
+
+    if (filter === 'active') {
+        filteredTasks = props.tasks.filter((el) => !el.isDone)
+    }
+    if (filter === 'completed') {
+        filteredTasks = props.tasks.filter((el) => el.isDone)
+    }
+
+    /* switch (filter) {
+         case "active":
+             filteredTasks = props.tasks.filter((el) => !el.isDone)
+             break;
+         case "completed":
+             filteredTasks = props.tasks.filter((el) => el.isDone)
+             break;
+         case "all":
+             filteredTasks = props.tasks
+             break;
+         default:
+             setFilter('all')
+     }*/
+
     const filterBtn = (el: FilterType) => {
-        props.setFilter(el)
+        setFilter(el)
     }
 
     return <div>
@@ -22,10 +52,10 @@ export function List(props: PropsType) {
             <button>+</button>
         </div>
         <ul>
-            {props.tasks.map((el, index) => {
+            {filteredTasks.map((el) => {
 
                 const onClickBtnHandler = () => {
-                    props.removeTask(el.id)
+                    removeTask(el.id)
                 }
 
                 return (
