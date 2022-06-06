@@ -1,26 +1,56 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
+import {List} from './List';
+
+export type TaskType = {
+    id: number
+    title: string
+    isDone: boolean
+}
+
+export type FilterType = 'all' | 'active' | 'completed'
 
 function App() {
+
+    /*let tasks1: Array<TaskType> = [
+        {id: 1, title: "HTML&CSS", isDone: true},
+        {id: 2, title: "JS", isDone: true},
+        {id: 3, title: "ReactJS", isDone: false}
+    ]*/
+
+    const [tasks, setTask1] = useState<Array<TaskType>>(
+        [
+            {id: 1, title: "HTML&CSS", isDone: true},
+            {id: 2, title: "JS", isDone: true},
+            {id: 3, title: "ReactJS", isDone: false},
+            {id: 4, title: "TSX", isDone: false}
+        ]
+    )
+
+    const [filter, setFilter] = useState<FilterType>('all')
+
+    const removeTask = (id: number) => {
+        let stateTasks = tasks.filter((el) => el.id !== id)
+        setTask1(stateTasks)
+    }
+
+    let filteredTasks = tasks
+
+    if (filter === 'active') {
+        filteredTasks = tasks.filter((el) => !el.isDone)
+    }
+    if (filter === 'completed') {
+        filteredTasks = tasks.filter((el) => el.isDone)
+    }
+
     return (
         <div className="App">
-            <div>
-                <h3>What to learn</h3>
-                <div>
-                    <input/>
-                    <button>+</button>
-                </div>
-                <ul>
-                    <li><input type="checkbox" checked={true}/> <span>HTML&CSS</span></li>
-                    <li><input type="checkbox" checked={true}/> <span>JS</span></li>
-                    <li><input type="checkbox" checked={false}/> <span>React</span></li>
-                </ul>
-                <div>
-                    <button>All</button>
-                    <button>Active</button>
-                    <button>Completed</button>
-                </div>
-            </div>
+            <List
+                title="What to learn"
+                tasks={filteredTasks}
+                removeTask={removeTask}
+                setFilter={setFilter}
+            />
         </div>
     );
 }
