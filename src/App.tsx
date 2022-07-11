@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import List, {TaskType} from "./List";
 import {v1} from "uuid";
+import AddItemForm from "./AddItemForm";
 
 // CRUD
 // create +
@@ -68,6 +69,16 @@ function App() {
         setTodoList(todoLists.filter(el => el.id !== todolistId))
         delete tasks[todolistId]
     }
+    const addTodoList = (title: string) => {
+        const newTodoListId = v1()
+        const newTodoList: TodoListType = {
+            id: newTodoListId,
+            title: title,
+            filter: "all"
+        }
+        setTodoList([newTodoList, ...todoLists])
+        setTasks({...tasks, [newTodoListId]: []})
+    }
 
     //UI:
     const todoListsComponents = todoLists.map(el => {
@@ -89,7 +100,6 @@ function App() {
                 title={el.title}
                 filter={el.filter}
                 tasks={tasksForRender}
-
                 addTask={addTask}
                 removeTask={removeTask}
                 changeTodoListFilter={changeTodoListFilter}
@@ -100,6 +110,7 @@ function App() {
     })
     return (
         <div className="App">
+            <AddItemForm addItem={addTodoList}/>
             {todoListsComponents}
         </div>
     );
