@@ -16,8 +16,10 @@ type TodoListPropsType = {
     addTask: (title: string, todoListId: string) => void
     removeTask: (taskID: string, todoListId: string) => void
     changeTodoListFilter: (filter: FilterValuesType, todoListId: string) => void
+    changeTodoListTitle: (title: string, todoListId: string) => void
     changeTaskStatus: (taskID: string, isDone: boolean, todoListId: string) => void
     removeTodolist: (e: string) => void
+    changeTaskTitle: (taskID: string, title: string, todoListId: string) => void
 }
 
 const List = (props: TodoListPropsType) => {
@@ -25,6 +27,9 @@ const List = (props: TodoListPropsType) => {
         ? props.tasks.map(t => {
             const removeTask = () => props.removeTask(t.id, props.id)
             const changeTaskStatus = (e: ChangeEvent<HTMLInputElement>) => props.changeTaskStatus(t.id, e.currentTarget.checked, props.id)
+            const changeTaskTitle = (editedTitle: string) => {
+                props.changeTaskTitle(t.id, editedTitle, props.id)
+            }
             return (
                 <li key={t.id} className={t.isDone ? "task isDone" : "task"}>
                     <input
@@ -33,7 +38,7 @@ const List = (props: TodoListPropsType) => {
                         checked={t.isDone}
 
                     />
-                    <EditableSpan title={t.title}/>
+                    <EditableSpan title={t.title} changeTitle={changeTaskTitle}/>
                     <button onClick={removeTask}>х</button>
                 </li>
             )
@@ -49,10 +54,13 @@ const List = (props: TodoListPropsType) => {
     const removeTodoist = () => {
         props.removeTodolist(props.id)
     }
+    const changeTodoTitle = (title: string) => {
+        props.changeTodoListTitle(title, props.id)
+    }
     return (
         <div>
             <h3>
-                {props.title}
+                <EditableSpan title={props.title} changeTitle={changeTodoTitle}/>
                 <button onClick={removeTodoist}>Delete</button>
             </h3>
             <AddItemForm addItem={addTask}/>
