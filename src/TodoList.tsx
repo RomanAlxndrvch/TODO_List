@@ -2,6 +2,8 @@ import React, {useState, KeyboardEvent, ChangeEvent} from 'react';
 import {FilterValuesType} from "./App";
 import AddItemForm from "./AddItemForm";
 import EditableSpan from "./EditableSpan";
+import {Button, Checkbox, IconButton, List, ListItem,} from "@mui/material";
+import {Delete} from "@mui/icons-material";
 // rsc
 export type TaskType = {
     id: string
@@ -22,7 +24,7 @@ type TodoListPropsType = {
     changeTaskTitle: (taskID: string, title: string, todoListId: string) => void
 }
 
-const List = (props: TodoListPropsType) => {
+const TodoList = (props: TodoListPropsType) => {
     const tasksJSX = props.tasks.length
         ? props.tasks.map(t => {
             const removeTask = () => props.removeTask(t.id, props.id)
@@ -31,16 +33,18 @@ const List = (props: TodoListPropsType) => {
                 props.changeTaskTitle(t.id, editedTitle, props.id)
             }
             return (
-                <li key={t.id} className={t.isDone ? "task isDone" : "task"}>
-                    <input
+                <ListItem divider={true} sx={{padding: '0'}} key={t.id} className={t.isDone ? "task isDone" : "task"}>
+                    <Checkbox
                         onChange={changeTaskStatus}
-                        type="checkbox"
+                        size={"small"}
                         checked={t.isDone}
 
                     />
                     <EditableSpan title={t.title} changeTitle={changeTaskTitle}/>
-                    <button onClick={removeTask}>х</button>
-                </li>
+                    <IconButton onClick={removeTask}>
+                        <Delete fontSize={"small"}/>
+                    </IconButton>
+                </ListItem>
             )
         })
         : <span>Your taskslist is empty</span>
@@ -61,31 +65,42 @@ const List = (props: TodoListPropsType) => {
         <div>
             <h3>
                 <EditableSpan title={props.title} changeTitle={changeTodoTitle}/>
-                <button onClick={removeTodoist}>Delete</button>
+                <IconButton onClick={removeTodoist}>
+                    <Delete/>
+                </IconButton>
             </h3>
             <AddItemForm addItem={addTask}/>
-            <ul>
+            <List sx={{width: '100%', maxWidth: 360}}>
                 {tasksJSX}
-            </ul>
+            </List>
             <div>
-                <button
-                    className={props.filter === "all" ? "active" : ""}
+                <Button
+                    style={{margin: '5px'}}
+                    color={props.filter === "all" ? "secondary" : "primary"}
+                    size={"small"}
+                    variant={"contained"}
                     onClick={onClickHandler}
                 >All
-                </button>
-                <button
-                    className={props.filter === "active" ? "active" : ""}
+                </Button>
+                <Button
+                    style={{margin: '5px'}}
+                    color={props.filter === "active" ? "secondary" : "primary"}
+                    size={"small"}
+                    variant={"contained"}
                     onClick={getOnClickHandler("active")}
                 >Active
-                </button>
-                <button
-                    className={props.filter === "completed" ? "active" : ""}
+                </Button>
+                <Button
+                    style={{margin: '5px'}}
+                    color={props.filter === "completed" ? "secondary" : "primary"}
+                    size={"small"}
+                    variant={"contained"}
                     onClick={getOnClickHandler("completed")}
                 >Completed
-                </button>
+                </Button>
             </div>
         </div>
     );
 };
 
-export default List;
+export default TodoList;

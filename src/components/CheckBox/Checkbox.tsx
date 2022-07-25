@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './Checkbox.module.css'
-import {TaskType} from "../../List";
+import {TaskType} from "../../TodoList";
 
 type CheckboxPropsType = {
     task: TaskType
