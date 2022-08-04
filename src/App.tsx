@@ -6,13 +6,7 @@ import AddItemForm from "./AddItemForm";
 import {AppBar, Button, Container, Grid, IconButton, Paper, Toolbar, Typography} from '@mui/material';
 import {Menu} from "@mui/icons-material";
 
-// CRUD
-// create +
-// read ++
-// update +
-// delete +
-
-type TodoListType = {
+export type TodoListType = {
     id: string
     title: string
     filter: FilterValuesType
@@ -24,7 +18,6 @@ type TaskStateType = {
 export type FilterValuesType = "all" | "active" | "completed"
 
 function App() {
-    //BLL:
     const todoListId_1 = v1()
     const todoListId_2 = v1()
 
