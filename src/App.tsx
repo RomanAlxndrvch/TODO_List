@@ -6,13 +6,13 @@ import AddItemForm from "./AddItemForm";
 import {AppBar, Button, Container, Grid, IconButton, Paper, Toolbar, Typography} from '@mui/material';
 import {Menu} from "@mui/icons-material";
 
-export type TodoListType = {
+export type TodolistType = {
     id: string
     title: string
     filter: FilterValuesType
 
 }
-type TaskStateType = {
+export type TasksStateType = {
     [todoLostId: string]: Array<TaskType>
 }
 export type FilterValuesType = "all" | "active" | "completed"
@@ -21,11 +21,11 @@ function App() {
     const todoListId_1 = v1()
     const todoListId_2 = v1()
 
-    const [todoLists, setTodoList] = useState<Array<TodoListType>>([
+    const [todoLists, setTodoList] = useState<Array<TodolistType>>([
         {id: todoListId_1, title: 'What to learn', filter: 'all'},
         {id: todoListId_2, title: 'What to buy', filter: 'all'}
     ])
-    const [tasks, setTasks] = useState<TaskStateType>({
+    const [tasks, setTasks] = useState<TasksStateType>({
         [todoListId_1]: [
             {id: v1(), title: "HTML&CSS", isDone: true},
             {id: v1(), title: "JS/TS", isDone: true},
@@ -77,7 +77,7 @@ function App() {
     }
     const addTodoList = (title: string) => {
         const newTodoListId = v1()
-        const newTodoList: TodoListType = {
+        const newTodoList: TodolistType = {
             id: newTodoListId,
             title: title,
             filter: "all"
