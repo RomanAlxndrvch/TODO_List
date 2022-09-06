@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
 import {teal, yellow} from "@mui/material/colors";
 import {dark} from "@mui/material/styles/createPalette";
+import AppWithRedux from "./AppWithRedux";
+import {Provider} from "react-redux";
+import {store} from "./reducers/store";
 
 const theme = createTheme(({
     palette: {
@@ -18,7 +21,9 @@ const theme = createTheme(({
 ReactDOM.render(
     <ThemeProvider theme={theme}>
         <CssBaseline/>
-        <App/>
+        <Provider store={store}>
+            <AppWithRedux/>
+        </Provider>
     </ThemeProvider>
 
     , document.getElementById('root'));
