@@ -20,6 +20,7 @@ import {
 } from "./reducers/tasks-reducer";
 import {useDispatch, useSelector} from "react-redux";
 import {AppRootState} from "./reducers/store";
+import TodoList1 from "./TodoList-1";
 
 export type FilterValuesType = "all" | "active" | "completed"
 
@@ -74,19 +75,20 @@ function AppWithRedux() {
         return (
             <Grid item key={el.id}>
                 <Paper elevation={3} style={{padding: '20px'}}>
-                    <TodoList
-                        key={el.id}
-                        id={el.id}
-                        title={el.title}
-                        filter={el.filter}
-                        tasks={tasksForRender}
-                        addTask={addTask}
-                        changeTaskStatus={changeTaskStatus}
-                        changeTaskTitle={changeTaskTitle}
-                        removeTask={removeTask}
-                        changeTodoListFilter={changeTodoListFilter}
-                        changeTodoListTitle={changeTodoListTitle}
-                        removeTodolist={removeTodolist}
+                    <TodoList1
+                        todolist={el}
+                        /*  key={el.id}
+                          id={el.id}
+                          title={el.title}
+                          filter={el.filter}
+                          tasks={tasksForRender}
+                          addTask={addTask}
+                          changeTaskStatus={changeTaskStatus}
+                          changeTaskTitle={changeTaskTitle}
+                          removeTask={removeTask}
+                          changeTodoListFilter={changeTodoListFilter}
+                          changeTodoListTitle={changeTodoListTitle}
+                          removeTodolist={removeTodolist}*/
                     />
                 </Paper>
             </Grid>
