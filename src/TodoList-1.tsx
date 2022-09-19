@@ -1,4 +1,4 @@
-import React, {useState, KeyboardEvent, ChangeEvent} from 'react';
+import React, {useState, KeyboardEvent, ChangeEvent, useCallback} from 'react';
 import {FilterValuesType} from "./App";
 import AddItemForm from "./AddItemForm";
 import EditableSpan from "./EditableSpan";
@@ -20,14 +20,14 @@ type TodoListPropsType = {
     todolist: TodolistType
 }
 
-const TodoList1 = ({todolist}: TodoListPropsType) => {
-    const {title, filter, id} = todolist
+const TodoList1 = (props: TodoListPropsType) => {
+    const {title, filter, id} = props.todolist
 
     const tasks = useSelector<AppRootState, Array<TaskType>>(state => state.tasks[id])
     const dispatch = useDispatch()
 
     let tasksForRender;
-    switch (todolist.filter) {
+    switch (props.todolist.filter) {
         case "active":
             tasksForRender = tasks.filter(t => !t.isDone)
             break
@@ -71,9 +71,11 @@ const TodoList1 = ({todolist}: TodoListPropsType) => {
         return () => dispatch(ChangeTodoListFilterAC(filter, id))
     }
     const onClickHandler = () => dispatch(ChangeTodoListFilterAC("all", id))
-    const addTask = (value: string) => {
+
+
+    const addTask = useCallback((value: string) => {
         dispatch(addTaskAC(value, id))
-    }
+    }, [])
     const removeTodoist = () => {
         dispatch(RemoveTodolistAC(id))
     }

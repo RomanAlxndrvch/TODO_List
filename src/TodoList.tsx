@@ -1,4 +1,4 @@
-import React, {useState, KeyboardEvent, ChangeEvent} from 'react';
+import React, {useState, KeyboardEvent, ChangeEvent, useCallback, memo} from 'react';
 import {FilterValuesType} from "./App";
 import AddItemForm from "./AddItemForm";
 import EditableSpan from "./EditableSpan";
@@ -21,9 +21,22 @@ type TodoListPropsType = {
     changeTaskTitle: (taskID: string, title: string, todoListId: string) => void
 }
 
-const TodoList = (props: TodoListPropsType) => {
+const TodoList = memo((props: TodoListPropsType) => {
+    let tasksForRender = [...props.tasks];
+    switch (props.filter) {
+        case "active":
+            tasksForRender = tasksForRender.filter(t => !t.isDone)
+            break
+        case "completed":
+            tasksForRender = tasksForRender.filter(t => t.isDone)
+            break
+        default:
+            tasksForRender = [...props.tasks]
+    }
+
     const tasksJSX = props.tasks.length
-        ? props.tasks.map(t => {
+        ? tasksForRender.map(t => {
+            console.log('Task')
             const removeTask = () => props.removeTask(t.id, props.id)
             const changeTaskStatus = (e: ChangeEvent<HTMLInputElement>) => props.changeTaskStatus(t.id, e.currentTarget.checked, props.id)
             const changeTaskTitle = (editedTitle: string) => {
@@ -49,9 +62,13 @@ const TodoList = (props: TodoListPropsType) => {
         return () => props.changeTodoListFilter(filter, props.id)
     }
     const onClickHandler = () => props.changeTodoListFilter("all", props.id)
-    const addTask = (value: string) => {
+
+
+    const addTask = useCallback((value: string) => {
         props.addTask(value, props.id)
-    }
+    }, [props.id, props.addTask])
+
+
     const removeTodoist = () => {
         props.removeTodolist(props.id)
     }
@@ -98,6 +115,6 @@ const TodoList = (props: TodoListPropsType) => {
             </div>
         </div>
     );
-};
+});
 
 export default TodoList;
