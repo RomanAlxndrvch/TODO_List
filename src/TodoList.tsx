@@ -38,7 +38,9 @@ const TodoList = memo((props: TodoListPropsType) => {
         ? tasksForRender.map(t => {
             console.log('Task')
             const removeTask = () => props.removeTask(t.id, props.id)
+
             const changeTaskStatus = (e: ChangeEvent<HTMLInputElement>) => props.changeTaskStatus(t.id, e.currentTarget.checked, props.id)
+
             const changeTaskTitle = (editedTitle: string) => {
                 props.changeTaskTitle(t.id, editedTitle, props.id)
             }
