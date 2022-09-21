@@ -5,6 +5,7 @@ import EditableSpan from "./EditableSpan";
 import {Button, Checkbox, IconButton, List, ListItem,} from "@mui/material";
 import {Delete} from "@mui/icons-material";
 import {TaskType} from "./reducers/tasks-reducer";
+import {Task} from "./Task";
 // rsc
 
 type TodoListPropsType = {
@@ -21,7 +22,7 @@ type TodoListPropsType = {
     changeTaskTitle: (taskID: string, title: string, todoListId: string) => void
 }
 
-const TodoList = memo((props: TodoListPropsType) => {
+const TodoList = memo(({addTask, removeTask, ...props}: TodoListPropsType) => {
     let tasksForRender = [...props.tasks];
     switch (props.filter) {
         case "active":
@@ -31,44 +32,38 @@ const TodoList = memo((props: TodoListPropsType) => {
             tasksForRender = tasksForRender.filter(t => t.isDone)
             break
         default:
-            tasksForRender = [...props.tasks]
+            tasksForRender = props.tasks
     }
+
+    const removeTaskWithCallBack = useCallback((taskId: string) => removeTask(taskId, props.id), [removeTask, props.id])
+
+    const changeTaskStatus = useCallback((taskId: string, status: boolean) => props.changeTaskStatus(taskId, status, props.id)
+        , [props.id, props.changeTaskStatus])
+
+    const changeTaskTitle = useCallback((taskId: string, editedTitle: string) => {
+        props.changeTaskTitle(taskId, editedTitle, props.id)
+    }, [props.changeTaskTitle, props.id])
 
     const tasksJSX = props.tasks.length
         ? tasksForRender.map(t => {
-            console.log('Task')
-            const removeTask = () => props.removeTask(t.id, props.id)
-
-            const changeTaskStatus = (e: ChangeEvent<HTMLInputElement>) => props.changeTaskStatus(t.id, e.currentTarget.checked, props.id)
-
-            const changeTaskTitle = (editedTitle: string) => {
-                props.changeTaskTitle(t.id, editedTitle, props.id)
-            }
             return (
-                <ListItem divider={true} sx={{padding: '0'}} key={t.id} className={t.isDone ? "task isDone" : "task"}>
-                    <Checkbox
-                        onChange={changeTaskStatus}
-                        size={"small"}
-                        checked={t.isDone}
+                <Task key={t.id} removeTask={removeTaskWithCallBack} changeTaskStatus={changeTaskStatus}
+                      changeTaskTitle={changeTaskTitle}
+                      task={t}/>
 
-                    />
-                    <EditableSpan title={t.title} changeTitle={changeTaskTitle}/>
-                    <IconButton onClick={removeTask}>
-                        <Delete fontSize={"small"}/>
-                    </IconButton>
-                </ListItem>
             )
         })
         : <span>Your taskslist is empty</span>
+
     const getOnClickHandler = (filter: FilterValuesType) => {
         return () => props.changeTodoListFilter(filter, props.id)
     }
     const onClickHandler = () => props.changeTodoListFilter("all", props.id)
 
 
-    const addTask = useCallback((value: string) => {
-        props.addTask(value, props.id)
-    }, [props.id, props.addTask])
+    const addTaskWithCallBack = useCallback((value: string) => {
+        addTask(value, props.id)
+    }, [props.id, addTask])
 
 
     const removeTodoist = () => {
@@ -85,7 +80,7 @@ const TodoList = memo((props: TodoListPropsType) => {
                     <Delete/>
                 </IconButton>
             </h3>
-            <AddItemForm addItem={addTask}/>
+            <AddItemForm addItem={addTaskWithCallBack}/>
             <List sx={{width: '100%', maxWidth: 360}}>
                 {tasksJSX}
             </List>
