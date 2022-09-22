@@ -69,9 +69,10 @@ const TodoList = memo(({addTask, removeTask, ...props}: TodoListPropsType) => {
     const removeTodoist = () => {
         props.removeTodolist(props.id)
     }
-    const changeTodoTitle = (title: string) => {
+    const changeTodoTitle = useCallback((title: string) => {
         props.changeTodoListTitle(title, props.id)
-    }
+    }, [props.changeTaskTitle, props.id])
+
     return (
         <div>
             <h3>
