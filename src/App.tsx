@@ -1,4 +1,4 @@
-import React, {useCallback, useReducer, useState} from 'react';
+import React, {useCallback, useEffect, useReducer, useState} from 'react';
 import './App.css';
 import TodoList from "./components/TodoList/TodoList";
 import AddItemForm from "./components/AddItemForm/AddItemForm";
@@ -25,6 +25,10 @@ import TodoList1 from "./unused/TodoList-1";
 export type FilterValuesType = "all" | "active" | "completed"
 
 function App() {
+    useEffect(() => {
+        document.title = 'TODO LISTd';
+    }, []);
+
     let tasks = useSelector<AppRootState, TasksStateType>(state => state.tasks)
     let todoLists = useSelector<AppRootState, Array<TodolistType>>(state => state.todoLists)
 

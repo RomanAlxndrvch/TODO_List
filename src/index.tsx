@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AppFirst from './unused/AppFirst';
 import * as serviceWorker from './serviceWorker';
 import {createTheme, CssBaseline, ThemeProvider} from "@mui/material";
 import {teal, yellow} from "@mui/material/colors";
@@ -17,6 +16,7 @@ const theme = createTheme(({
         mode: 'dark'
     }
 }))
+
 
 ReactDOM.render(
     <ThemeProvider theme={theme}>
