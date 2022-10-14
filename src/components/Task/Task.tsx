@@ -1,7 +1,7 @@
 import React, {ChangeEvent, memo, useCallback} from "react";
-import {TaskType} from "./reducers/tasks-reducer";
+import {TaskType} from "../../reducers/tasks-reducer";
 import {Checkbox, IconButton, ListItem} from "@mui/material";
-import EditableSpan from "./EditableSpan";
+import EditableSpan from "../EditableSpan/EditableSpan";
 import {Delete} from "@mui/icons-material";
 
 export type TaskPropsType = {

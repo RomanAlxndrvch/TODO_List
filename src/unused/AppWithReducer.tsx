@@ -1,8 +1,8 @@
 import React, {useReducer, useState} from 'react';
-import './App.css';
-import TodoList from "./TodoList";
+import '../App.css';
+import TodoList from "../components/TodoList/TodoList";
 import {v1} from "uuid";
-import AddItemForm from "./AddItemForm";
+import AddItemForm from "../components/AddItemForm/AddItemForm";
 import {AppBar, Button, Container, Grid, IconButton, Paper, Toolbar, Typography} from '@mui/material';
 import {Menu} from "@mui/icons-material";
 import {
@@ -11,14 +11,14 @@ import {
     ChangeTodolistTitleAC,
     RemoveTodolistAC,
     todolistsReducer
-} from "./reducers/todolists-reducer";
+} from "../reducers/todolists-reducer";
 import tasksReducer, {
     addTaskAC,
     changeTaskStatusAC,
     changeTaskTitleAC,
     removeTaskAC,
     TaskType
-} from "./reducers/tasks-reducer";
+} from "../reducers/tasks-reducer";
 
 export type TodolistType = {
     id: string
@@ -116,7 +116,7 @@ function AppWithReducer() {
         )
     })
     return (
-        <div className={'App'}>
+        <div className={'AppFirst'}>
             <AppBar position={"static"}>
                 <Toolbar style={{justifyContent: 'space-between', backgroundColor: 'teal'}}>
                     <IconButton edge={"start"} color={"inherit"} aria-label={'menu'}>

@@ -1,7 +1,7 @@
 import React, {ChangeEvent, memo, useCallback} from "react";
-import {changeTaskStatusAC, changeTaskTitleAC, removeTaskAC, TaskType} from "./reducers/tasks-reducer";
+import {changeTaskStatusAC, changeTaskTitleAC, removeTaskAC, TaskType} from "../reducers/tasks-reducer";
 import {Checkbox, IconButton, ListItem} from "@mui/material";
-import EditableSpan from "./EditableSpan";
+import EditableSpan from "../components/EditableSpan/EditableSpan";
 import {Delete} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
 

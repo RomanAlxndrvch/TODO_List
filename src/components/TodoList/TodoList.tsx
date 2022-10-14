@@ -1,11 +1,11 @@
 import React, {useState, KeyboardEvent, ChangeEvent, useCallback, memo} from 'react';
-import {FilterValuesType} from "./App";
-import AddItemForm from "./AddItemForm";
-import EditableSpan from "./EditableSpan";
+import {FilterValuesType} from "../../unused/AppFirst";
+import AddItemForm from "../AddItemForm/AddItemForm";
+import EditableSpan from "../EditableSpan/EditableSpan";
 import {Button, Checkbox, IconButton, List, ListItem,} from "@mui/material";
 import {Delete} from "@mui/icons-material";
-import {TaskType} from "./reducers/tasks-reducer";
-import {Task} from "./Task";
+import {TaskType} from "../../reducers/tasks-reducer";
+import {Task} from "../Task/Task";
 // rsc
 
 type TodoListPropsType = {

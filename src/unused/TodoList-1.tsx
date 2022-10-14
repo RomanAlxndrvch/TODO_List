@@ -1,19 +1,19 @@
 import React, {useState, KeyboardEvent, ChangeEvent, useCallback} from 'react';
-import {FilterValuesType} from "./App";
-import AddItemForm from "./AddItemForm";
-import EditableSpan from "./EditableSpan";
+import {FilterValuesType} from "./AppFirst";
+import AddItemForm from "../components/AddItemForm/AddItemForm";
+import EditableSpan from "../components/EditableSpan/EditableSpan";
 import {Button, Checkbox, IconButton, List, ListItem,} from "@mui/material";
 import {Delete} from "@mui/icons-material";
-import {addTaskAC, changeTaskStatusAC, changeTaskTitleAC, removeTaskAC, TaskType} from "./reducers/tasks-reducer";
+import {addTaskAC, changeTaskStatusAC, changeTaskTitleAC, removeTaskAC, TaskType} from "../reducers/tasks-reducer";
 import {TodolistType} from "./AppWithReducer";
 import {useDispatch, useSelector} from "react-redux";
-import {AppRootState} from "./reducers/store";
+import {AppRootState} from "../reducers/store";
 import {
     AddTodolistAC,
     ChangeTodoListFilterAC,
     ChangeTodolistTitleAC,
     RemoveTodolistAC
-} from "./reducers/todolists-reducer";
+} from "../reducers/todolists-reducer";
 // rsc
 
 type TodoListPropsType = {
