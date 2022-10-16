@@ -6,6 +6,7 @@ import {Button, Checkbox, IconButton, List, ListItem,} from "@mui/material";
 import {Delete} from "@mui/icons-material";
 import {TaskType} from "../../reducers/tasks-reducer";
 import {Task} from "../Task/Task";
+import {TaskWithRedux} from "../Task/TaskWithRedux";
 // rsc
 
 type TodoListPropsType = {
@@ -47,9 +48,10 @@ const TodoList = memo(({addTask, removeTask, ...props}: TodoListPropsType) => {
     const tasksJSX = props.tasks.length
         ? tasksForRender.map(t => {
             return (
-                <Task key={t.id} removeTask={removeTaskWithCallBack} changeTaskStatus={changeTaskStatus}
+                /*<Task key={t.id} removeTask={removeTaskWithCallBack} changeTaskStatus={changeTaskStatus}
                       changeTaskTitle={changeTaskTitle}
-                      task={t}/>
+                      task={t}/>*/
+                <TaskWithRedux key={t.id} todoListId={props.id} task={t}/>
 
             )
         })

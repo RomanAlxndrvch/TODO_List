@@ -26,7 +26,7 @@ export type FilterValuesType = "all" | "active" | "completed"
 
 function App() {
     useEffect(() => {
-        document.title = 'TODO LISTd';
+        document.title = 'TODO LIST';
     }, []);
 
     let tasks = useSelector<AppRootState, TasksStateType>(state => state.tasks)
