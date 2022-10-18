@@ -3,8 +3,10 @@ import {ComponentStory, ComponentMeta} from '@storybook/react';
 import {Task} from "./Task";
 import {action} from "@storybook/addon-actions";
 import {TaskWithRedux} from "./TaskWithRedux";
-import {Provider} from "react-redux";
-import {store} from "../../reducers/store";
+import {Provider, useSelector} from "react-redux";
+import {AppRootState, store} from "../../reducers/store";
+import {ReduxStoreProviderDecorator} from "../../stories/decorators/ReduxStoreProviderDecorator";
+import {TaskType} from "../../reducers/tasks-reducer";
 
 
 export default {
@@ -15,17 +17,20 @@ export default {
         removeTask: action('Remove Task Clicked'),
         changeTaskStatus: action('Change Task Status clicked')
     },
-} as ComponentMeta<typeof TaskWithRedux>;
+    decorators: [ReduxStoreProviderDecorator]
+} as ComponentMeta<typeof TaskWithReduxContainer>;
 
 
-const Template: ComponentStory<typeof TaskWithRedux> = (args) =>
-    <Provider store={store}>
-        <TaskWithRedux {...args} />;
-    </Provider>
-
-export const TaskAnother = Template.bind({});
-
-TaskAnother.args = {
-    task: {id: '1', isDone: false, title: 'Test Tusk'},
-    todoListId: '1'
+const TaskWithReduxContainer = () => {
+    const task = useSelector<AppRootState, TaskType>(state => state.tasks['todolistId1'][0])
+    return <TaskWithRedux todoListId={'todolistId1'} task={task}/>;
+ 
 }
+
+const Template: ComponentStory<typeof TaskWithReduxContainer> = (args) => {
+    return <TaskWithReduxContainer/>
+}
+
+
+export const TaskWithReduxExample = Template.bind({});
+
