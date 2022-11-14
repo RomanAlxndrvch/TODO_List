@@ -1,4 +1,4 @@
-import React, {ChangeEvent, memo, useCallback} from "react";
+import React, {memo, useCallback} from "react";
 import {changeTaskStatusAC, changeTaskTitleAC, removeTaskAC, TaskType} from "../../reducers/tasks-reducer";
 import {Checkbox, IconButton, ListItem} from "@mui/material";
 import EditableSpan from "../EditableSpan/EditableSpan";
