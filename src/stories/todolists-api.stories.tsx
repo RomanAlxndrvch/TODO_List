@@ -1,14 +1,21 @@
 import React, {useEffect, useState} from 'react'
+import axios from "axios";
 
 export default {
     title: 'API'
 }
+const instance = axios.create({
+    baseURL: 'https://social-network.samuraijs.com/api/1.1/',
+    withCredentials: true
+})
 
 export const GetTodolists = () => {
     const [state, setState] = useState<any>(null)
     useEffect(() => {
-        // здесь мы будем делать запрос и ответ закидывать в стейт.
-        // который в виде строки будем отображать в div-ке
+        instance.get('todo-lists').then((response) => {
+            console.log(response)
+            setState(response.data)
+        })
 
     }, [])
     return <div>{JSON.stringify(state)}</div>
