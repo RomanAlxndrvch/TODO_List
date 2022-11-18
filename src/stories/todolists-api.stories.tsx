@@ -2,7 +2,10 @@ import React, {useEffect, useState} from 'react'
 import axios from "axios";
 
 export default {
-    title: 'API'
+    title: 'API',
+    headers: {
+        'API-KEY': '8fc044d8-3f5e-469a-b681-136f15cb55d0'
+    }
 }
 const instance = axios.create({
     baseURL: 'https://social-network.samuraijs.com/api/1.1/',
@@ -23,6 +26,10 @@ export const GetTodolists = () => {
 export const CreateTodolist = () => {
     const [state, setState] = useState<any>(null)
     useEffect(() => {
+        const title = 'React 1488'
+        instance.post('todo-lists', {title}).then((res) => {
+            setState(res.data)
+        })
     }, [])
 
     return <div>{JSON.stringify(state)}</div>
