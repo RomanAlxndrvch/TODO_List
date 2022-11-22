@@ -1,12 +1,11 @@
-import React, {useState, KeyboardEvent, ChangeEvent, useCallback, memo} from 'react';
-import {FilterValuesType} from "../../unused/AppFirst";
+import React, {memo, useCallback} from 'react';
 import AddItemForm from "../AddItemForm/AddItemForm";
 import EditableSpan from "../EditableSpan/EditableSpan";
-import {Button, Checkbox, IconButton, List, ListItem,} from "@mui/material";
+import {Button, IconButton, List,} from "@mui/material";
 import {Delete} from "@mui/icons-material";
-import {TaskType} from "../../reducers/tasks-reducer";
-import {Task} from "../Task/Task";
 import {TaskWithRedux} from "../Task/TaskWithRedux";
+import {FilterValuesType} from "../../reducers/todolists-reducer";
+import {TaskStatuses, TaskType} from "../../api/todolistApi";
 // rsc
 
 type TodoListPropsType = {
@@ -18,7 +17,7 @@ type TodoListPropsType = {
     removeTask: (taskID: string, todoListId: string) => void
     changeTodoListFilter: (filter: FilterValuesType, todoListId: string) => void
     changeTodoListTitle: (title: string, todoListId: string) => void
-    changeTaskStatus: (taskID: string, isDone: boolean, todoListId: string) => void
+    changeTaskStatus: (taskID: string, status: TaskStatuses, todoListId: string) => void
     removeTodolist: (e: string) => void
     changeTaskTitle: (taskID: string, title: string, todoListId: string) => void
 }
@@ -27,10 +26,10 @@ const TodoList = memo(({addTask, removeTask, ...props}: TodoListPropsType) => {
     let tasksForRender = [...props.tasks];
     switch (props.filter) {
         case "active":
-            tasksForRender = tasksForRender.filter(t => !t.isDone)
+            tasksForRender = tasksForRender.filter(t => t.status === TaskStatuses.New)
             break
         case "completed":
-            tasksForRender = tasksForRender.filter(t => t.isDone)
+            tasksForRender = tasksForRender.filter(t => t.status === TaskStatuses.Completed)
             break
         default:
             tasksForRender = props.tasks
@@ -38,7 +37,7 @@ const TodoList = memo(({addTask, removeTask, ...props}: TodoListPropsType) => {
 
     const removeTaskWithCallBack = useCallback((taskId: string) => removeTask(taskId, props.id), [removeTask, props.id])
 
-    const changeTaskStatus = useCallback((taskId: string, status: boolean) => props.changeTaskStatus(taskId, status, props.id)
+    const changeTaskStatus = useCallback((taskId: string, status: TaskStatuses) => props.changeTaskStatus(taskId, status, props.id)
         , [props.id, props.changeTaskStatus])
 
     const changeTaskTitle = useCallback((taskId: string, editedTitle: string) => {
