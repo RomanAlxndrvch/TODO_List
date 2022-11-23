@@ -1,31 +1,26 @@
-/*.AppFirst {
+/*
+.App {
   padding: 30px;
   display: flex;
 }
 
-.AppFirst > div {
+.App > div {
   margin-right: 50px;
-}*/
-
-
-/*.active {
-    background-color: darksalmon;
-    color: white;
-    font-weight: bold;
-}*/
-
-
-.isDone {
-    text-decoration: line-through;
-    color: #555;
 }
-
-.task {
-    font-weight: bold;
-}
-
 
 .error {
-    border: 2px solid red;
-    outline: none;
+  border: red 1px solid;
 }
+
+.error-message {
+  color: red;
+}
+
+.active-filter {
+  background-color: aquamarine;
+}
+
+.is-done {
+  opacity: 0.5;
+}
+*/
