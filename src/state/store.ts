@@ -14,7 +14,7 @@ export let store = legacy_createStore(rootReducer, applyMiddleware(thunk))
 // определить автоматически тип всего объекта состояния
 export type AppRootStateType = ReturnType<typeof rootReducer>
 export type RootState = ReturnType<typeof store.getState>
-export type AppDispatch = ThunkDispatch<RootState, unknown, AnyAction>
+export type AppDispatch = ThunkDispatch<AppRootStateType, unknown, AnyAction>
 
 
 // а это, чтобы можно было в консоли браузера обращаться к store в любой момент
