@@ -22,10 +22,11 @@ export type ChangeTodolistFilterActionType = {
     filter: FilterValuesType
 }
 
-export type TodoListsActionsType = RemoveTodolistActionType | AddTodolistActionType
+export type TodoListsActionsType = RemoveTodolistActionType
+    | AddTodolistActionType
     | ChangeTodolistTitleActionType
-    | ChangeTodolistFilterActionType |
-    ReturnType<typeof setTodoListAC>
+    | ChangeTodolistFilterActionType
+    | ReturnType<typeof setTodoListAC>
 
 const initialState: Array<TodolistDomainType> = [
     /*{id: todolistId1, title: 'What to learn', filter: 'all', addedDate: '', order: 0},
@@ -87,7 +88,6 @@ export const changeTodolistTitleAC = (id: string, title: string): ChangeTodolist
 export const changeTodolistFilterAC = (id: string, filter: FilterValuesType): ChangeTodolistFilterActionType => {
     return {type: 'CHANGE-TODOLIST-FILTER', id: id, filter: filter}
 }
-
 export const setTodoListAC = (todoLists: Array<TodolistType>) => {
     return {
         type: 'SET-TODOLISTS',
