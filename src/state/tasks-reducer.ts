@@ -1,3 +1,4 @@
+/*
 import {TasksStateType} from '../App';
 import {v1} from 'uuid';
 import {AddTodolistActionType, RemoveTodolistActionType, setTodoListAC} from './todolists-reducer';
@@ -33,7 +34,7 @@ export type TasksActionsType = RemoveTaskActionType | ReturnType<typeof addTaskA
 
 
 const initialState: TasksStateType = {
-    /*"todolistId1": [
+    /!*"todolistId1": [
         { id: "1", title: "CSS", status: TaskStatuses.New, todoListId: "todolistId1", description: '',
             startDate: '', deadline: '', addedDate: '', order: 0, priority: TaskPriorities.Low },
         { id: "2", title: "JS", status: TaskStatuses.Completed, todoListId: "todolistId1", description: '',
@@ -48,7 +49,7 @@ const initialState: TasksStateType = {
             startDate: '', deadline: '', addedDate: '', order: 0, priority: TaskPriorities.Low },
         { id: "3", title: "tea", status: TaskStatuses.New, todoListId: "todolistId2", description: '',
             startDate: '', deadline: '', addedDate: '', order: 0, priority: TaskPriorities.Low }
-    ]*/
+    ]*!/
 
 }
 
@@ -155,4 +156,4 @@ export const updateTaskTC = (todoListId: string, taskId: string, model: updateMo
             dispatch(updateTaskAC(todoListId, taskId, res.data.data.item))
         })
     }
-}
+}*/
