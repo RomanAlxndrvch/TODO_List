@@ -16,16 +16,12 @@ import {
     changeTodolistFilterAC,
     changeTodolistTitleAC,
     FilterValuesType,
-    removeTodolistAC, setTodoListAC, setTodoListTC,
+    removeTodolistAC, setTodoListTC,
     TodolistDomainType
 } from './state/todolists-reducer'
 import {
-    addTaskAC,
     addTaskTC,
-    changeTaskStatusAC,
-    changeTaskTitleAC,
-    removeTaskAC,
-    removeTaskTC
+    removeTaskTC, updateModelType, updateTaskTC
 } from './state/tasks-reducer';
 import {useDispatch, useSelector} from 'react-redux';
 import {AppRootStateType} from './state/store';
@@ -59,14 +55,8 @@ function App() {
         dispatch(action);
     }, []);
 
-    const changeStatus = useCallback(function (id: string, status: TaskStatuses, todolistId: string) {
-        const action = changeTaskStatusAC(id, status, todolistId);
-        dispatch(action);
-    }, []);
-
-    const changeTaskTitle = useCallback(function (id: string, newTitle: string, todolistId: string) {
-        const action = changeTaskTitleAC(id, newTitle, todolistId);
-        dispatch(action);
+    const updateTask = useCallback(function (id: string, model: updateModelType, todolistId: string) {
+        dispatch(updateTaskTC(todolistId, id, model))
     }, []);
 
     const changeFilter = useCallback(function (value: FilterValuesType, todolistId: string) {
@@ -120,11 +110,10 @@ function App() {
                                         removeTask={removeTask}
                                         changeFilter={changeFilter}
                                         addTask={addTask}
-                                        changeTaskStatus={changeStatus}
                                         filter={tl.filter}
                                         removeTodolist={removeTodolist}
-                                        changeTaskTitle={changeTaskTitle}
                                         changeTodolistTitle={changeTodolistTitle}
+                                        updateTask={updateTask}
                                     />
                                 </Paper>
                             </Grid>

@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="14 2.32">
+    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="14 3,19">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Todolist.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Todolist.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/tasks-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +215,8 @@
       <workItem from="1676516816120" duration="3734000" />
       <workItem from="1676601373444" duration="5743000" />
       <workItem from="1676761388007" duration="71000" />
-      <workItem from="1676761515721" duration="8072000" />
+      <workItem from="1676761515721" duration="8839000" />
+      <workItem from="1676845802468" duration="8148000" />
     </task>
     <task id="LOCAL-00001" summary="Lessen 3.">
       <created>1655261891514</created>
@@ -544,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676609427755</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="14 3,19">
+      <created>1676774746616</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1676774746616</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lessen 10." />
     <MESSAGE value="Lessen 10. #2&#10;New Todolist,move logic from app.tsx to todolist.tsx" />
     <MESSAGE value="Lessen 11. React.memo,useCallback. 2.26.17" />
     <MESSAGE value="Lessen 11. React.memo,useCallback. 2.35.44" />
@@ -587,6 +596,7 @@
     <MESSAGE value="14 01.25" />
     <MESSAGE value="14 1.53" />
     <MESSAGE value="14 2.32" />
-    <option name="LAST_COMMIT_MESSAGE" value="14 2.32" />
+    <MESSAGE value="14 3,19" />
+    <option name="LAST_COMMIT_MESSAGE" value="14 3,19" />
   </component>
 </project>
