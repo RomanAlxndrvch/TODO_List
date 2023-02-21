@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './App.css'
-import { TodolistsList } from '../features/TodolistsList/TodolistsList'
+import {TodolistsList} from '../features/TodolistsList/TodolistsList'
 
 // You can learn about the difference by reading this guide on minimizing bundle size.
 // https://mui.com/guides/minimizing-bundle-size/
@@ -11,13 +11,28 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import { Menu } from '@mui/icons-material';
+import {Menu} from '@mui/icons-material';
+import {LinearProgress} from "@mui/material";
+import {useSelector} from "react-redux";
+import {AppRootStateType, useAppDispatch} from "./store";
+import {RequestStatusType, setStatusAC} from "./app-reducer";
+import {fetchTodolistsTC} from "../features/TodolistsList/todolists-reducer";
 
 
 function App() {
 
-    return (
-        <div className="App">
+    const status = useSelector<AppRootStateType, RequestStatusType>(state => state.status.status)
+    const dispatch = useAppDispatch()
+
+    useEffect(() => {
+        dispatch(setStatusAC('loading'))
+        dispatch(fetchTodolistsTC())
+    }, [])
+
+    if (status === "loading") {
+    }
+    if (status === "succeeded") {
+        return <div className="App">
             <AppBar position="static">
                 <Toolbar>
                     <IconButton edge="start" color="inherit" aria-label="menu">
@@ -33,7 +48,13 @@ function App() {
                 <TodolistsList/>
             </Container>
         </div>
-    )
+
+    }
+    else {
+        return <LinearProgress/>
+    }
+
+
 }
 
 export default App

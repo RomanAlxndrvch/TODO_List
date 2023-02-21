@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="14">
+    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="14. 00\00">
+      <change afterPath="$PROJECT_DIR$/src/app/app-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/todolists-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/todolists-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,20 +219,7 @@
       <workItem from="1676761515721" duration="8839000" />
       <workItem from="1676845802468" duration="8246000" />
       <workItem from="1676929954297" duration="987000" />
-    </task>
-    <task id="LOCAL-00001" summary="Lessen 3.">
-      <created>1655261891514</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1655261891514</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Lessen 4.&#10;Make our checkboxes work,add some checks to input. (cant write spaces and clean spaces at front and back)&#10;Add some css.">
-      <created>1655354998737</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1655354998737</updated>
+      <workItem from="1676931100458" duration="6065000" />
     </task>
     <task id="LOCAL-00003" summary="Lessen 4.&#10;Add CheckBox component">
       <created>1655432111115</created>
@@ -558,7 +550,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676858053339</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="14. 00\00">
+      <created>1676931458404</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1676931458404</updated>
+    </task>
+    <task id="LOCAL-00051" summary="14. 00\00">
+      <created>1676932463673</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1676932463673</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +582,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lessen 11. React.memo,useCallback. 2.26.17" />
     <MESSAGE value="Lessen 11. React.memo,useCallback. 2.35.44" />
     <MESSAGE value="Lessen 11. React.memo,useCallback. 3.04.15" />
     <MESSAGE value="11. React.memo,useCallback." />
@@ -601,6 +606,7 @@
     <MESSAGE value="14 2.32" />
     <MESSAGE value="14 3,19" />
     <MESSAGE value="14" />
-    <option name="LAST_COMMIT_MESSAGE" value="14" />
+    <MESSAGE value="14. 00\00" />
+    <option name="LAST_COMMIT_MESSAGE" value="14. 00\00" />
   </component>
 </project>
