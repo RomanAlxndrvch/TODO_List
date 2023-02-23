@@ -14,46 +14,39 @@ import Container from '@mui/material/Container';
 import {Menu} from '@mui/icons-material';
 import {LinearProgress} from "@mui/material";
 import {useSelector} from "react-redux";
-import {AppRootStateType, useAppDispatch} from "./store";
+import {AppRootStateType, useAppDispatch, useAppSelector} from "./store";
 import {RequestStatusType, setStatusAC} from "./app-reducer";
 import {fetchTodolistsTC} from "../features/TodolistsList/todolists-reducer";
+import {ErrorSnackbar} from "../components/ErrorSnackbar/ErrorSnackbar";
 
 
 function App() {
 
-    const status = useSelector<AppRootStateType, RequestStatusType>(state => state.status.status)
+    const status = useAppSelector<RequestStatusType>(state => state.app.status)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        dispatch(setStatusAC('loading'))
         dispatch(fetchTodolistsTC())
     }, [])
 
-    if (status === "loading") {
-    }
-    if (status === "succeeded") {
-        return <div className="App">
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton edge="start" color="inherit" aria-label="menu">
-                        <Menu/>
-                    </IconButton>
-                    <Typography variant="h6">
-                        News
-                    </Typography>
-                    <Button color="inherit">Login</Button>
-                </Toolbar>
-            </AppBar>
-            <Container fixed>
-                <TodolistsList/>
-            </Container>
-        </div>
-
-    }
-    else {
-        return <LinearProgress/>
-    }
-
+    return <div className="App">
+        <AppBar position="static">
+            <Toolbar>
+                <IconButton edge="start" color="inherit" aria-label="menu">
+                    <Menu/>
+                </IconButton>
+                <Typography variant="h6">
+                    News
+                </Typography>
+                <Button color="inherit">Login</Button>
+            </Toolbar>
+        </AppBar>
+        {status === 'loading' && <LinearProgress/>}
+        <Container fixed>
+            <TodolistsList/>
+            {status === 'failed' && <ErrorSnackbar/>}
+        </Container>
+    </div>
 
 }
 

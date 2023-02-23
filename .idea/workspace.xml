@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="14. 00\00">
-      <change afterPath="$PROJECT_DIR$/src/app/app-reducer.ts" afterDir="false" />
+    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="14. 23.00">
+      <change afterPath="$PROJECT_DIR$/src/components/ErrorSnackbar/ErrorSnackbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/todolists-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/todolists-api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,11 +66,11 @@
       <recent name="H:\WebStormProjects\TODO_List-Main\src\components\AddItemForm" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\WebStormProjects\TODO_List-Main\src\components" />
+      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\EditableSpan\ErrorSnackbar" />
       <recent name="H:\WebStormProjects\TODO_List-Main\src\unused" />
       <recent name="H:\WebStormProjects\TODO_List-Main\src\components\TodoList" />
       <recent name="H:\WebStormProjects\TODO_List-Main\src\components\Task" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\EditableSpan" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\AddItemForm" />
     </key>
   </component>
   <component name="RunManager" selected="Jest.correct todolist should change its name">
@@ -219,14 +220,8 @@
       <workItem from="1676761515721" duration="8839000" />
       <workItem from="1676845802468" duration="8246000" />
       <workItem from="1676929954297" duration="987000" />
-      <workItem from="1676931100458" duration="6065000" />
-    </task>
-    <task id="LOCAL-00003" summary="Lessen 4.&#10;Add CheckBox component">
-      <created>1655432111115</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1655432111115</updated>
+      <workItem from="1676931100458" duration="6125000" />
+      <workItem from="1677119571949" duration="6142000" />
     </task>
     <task id="LOCAL-00004" summary="Lessen 5.&#10;Associative massive&#10;Add new ToDoLists">
       <created>1656042858792</created>
@@ -564,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676932463673</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="14. 23.00">
+      <created>1676940565336</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1676940565336</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Lessen 11. React.memo,useCallback. 2.35.44" />
     <MESSAGE value="Lessen 11. React.memo,useCallback. 3.04.15" />
     <MESSAGE value="11. React.memo,useCallback." />
     <MESSAGE value="refactor" />
@@ -607,6 +608,7 @@
     <MESSAGE value="14 3,19" />
     <MESSAGE value="14" />
     <MESSAGE value="14. 00\00" />
-    <option name="LAST_COMMIT_MESSAGE" value="14. 00\00" />
+    <MESSAGE value="14. 23.00" />
+    <option name="LAST_COMMIT_MESSAGE" value="14. 23.00" />
   </component>
 </project>
