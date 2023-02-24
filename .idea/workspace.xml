@@ -219,14 +219,8 @@
       <workItem from="1676845802468" duration="8246000" />
       <workItem from="1676929954297" duration="987000" />
       <workItem from="1676931100458" duration="6125000" />
-      <workItem from="1677119571949" duration="6779000" />
-    </task>
-    <task id="LOCAL-00005" summary="Lessen 6.&#10;AddItemForm component and function to add new TodoLists added.">
-      <created>1657515714990</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1657515714990</updated>
+      <workItem from="1677119571949" duration="6884000" />
+      <workItem from="1677208533986" duration="3966000" />
     </task>
     <task id="LOCAL-00006" summary="Lessen 6.&#10;EditableSpan added. &#10;Function to change tasks and TodoLists added.">
       <created>1657597256305</created>
@@ -564,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677126040668</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="14. 54.00">
+      <created>1677126642733</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1677126642733</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

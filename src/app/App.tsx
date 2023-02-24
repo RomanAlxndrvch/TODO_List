@@ -23,7 +23,7 @@ import {ErrorSnackbar} from "../components/ErrorSnackbar/ErrorSnackbar";
 function App() {
 
     const status = useAppSelector<RequestStatusType>(state => state.app.status)
-    const errorMessage = useAppSelector<string>(state => state.app.errorMessage)
+    const error = useAppSelector<string | null>(state => state.app.error)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
@@ -45,7 +45,7 @@ function App() {
         {status === 'loading' && <LinearProgress/>}
         <Container fixed>
             <TodolistsList/>
-            {status === 'failed' && <ErrorSnackbar errorMessage={errorMessage}/>}
+            <ErrorSnackbar error={error}/>
         </Container>
     </div>
 

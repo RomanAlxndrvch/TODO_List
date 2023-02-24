@@ -68,7 +68,7 @@ export const addTodolistTC = (title: string) => {
                 }
                 if (res.data.resultCode === 1) {
                     dispatch(setStatusAC("failed"))
-                    dispatch(setErrorMessageAC(res.data.messages))
+                    dispatch(setErrorMessageAC(res.data.messages[0]))
                 }
             })
     }
