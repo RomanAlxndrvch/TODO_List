@@ -45,7 +45,7 @@ function App() {
         {status === 'loading' && <LinearProgress/>}
         <Container fixed>
             <TodolistsList/>
-            <ErrorSnackbar error={error}/>
+            <ErrorSnackbar/>
         </Container>
     </div>
 
