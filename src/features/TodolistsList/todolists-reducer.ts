@@ -66,7 +66,11 @@ export const removeTodolistTC = (todolistId: string) => {
                 dispatch(removeTodolistAC(todolistId))
                 dispatch(setStatusAC("succeeded"))
                 // dispatch(changeEntityStatusAC('idle', todolistId))
-            })
+            }).catch((err) => {
+            dispatch(setStatusAC('loading'))
+            dispatch(changeEntityStatusAC('failed', todolistId))
+            setErrorMessageAC(err.message [0])
+        })
     }
 }
 export const addTodolistTC = (title: string) => {
