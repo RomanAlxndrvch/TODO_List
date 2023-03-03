@@ -1,4 +1,9 @@
-import {AddTodolistActionType, RemoveTodolistActionType, SetTodolistsActionType} from './todolists-reducer'
+import {
+    AddTodolistActionType,
+    changeEntityStatusAC,
+    RemoveTodolistActionType,
+    SetTodolistsActionType
+} from './todolists-reducer'
 import {TaskPriorities, TaskStatuses, TaskType, todolistsAPI, UpdateTaskModelType} from '../../api/todolists-api'
 import {Dispatch} from 'redux'
 import {AppRootStateType} from '../../app/store'
@@ -58,20 +63,33 @@ export const fetchTasksTC = (todolistId: string) => (dispatch: Dispatch<ActionsT
             dispatch(action)
             dispatch(setStatusAC("succeeded"))
         })
+        .catch(err => {
+            dispatch(setStatusAC("failed"))
+            dispatch(setErrorMessageAC(err.message))
+        })
 }
 export const removeTaskTC = (taskId: string, todolistId: string) => (dispatch: Dispatch<ActionsType>) => {
     dispatch(setStatusAC("loading"))
+    dispatch(changeEntityStatusAC('loading', todolistId))
     todolistsAPI.deleteTask(todolistId, taskId)
         .then(res => {
             const action = removeTaskAC(taskId, todolistId)
             dispatch(action)
             dispatch(setStatusAC("succeeded"))
+            dispatch(changeEntityStatusAC('succeeded', todolistId))
+        })
+        .catch(err => {
+            dispatch(changeEntityStatusAC('failed', todolistId))
+            dispatch(setStatusAC("failed"))
+            dispatch(setErrorMessageAC(err.message))
         })
 }
 export const addTaskTC = (title: string, todolistId: string) => (dispatch: Dispatch<ActionsType>) => {
     dispatch(setStatusAC("loading"))
+    dispatch(changeEntityStatusAC('loading', todolistId))
     todolistsAPI.createTask(todolistId, title)
         .then(res => {
+            dispatch(changeEntityStatusAC('succeeded', todolistId))
             if (res.data.resultCode === 0) {
                 const task = res.data.data.item
                 const action = addTaskAC(task)
@@ -86,8 +104,13 @@ export const addTaskTC = (title: string, todolistId: string) => (dispatch: Dispa
                     dispatch(setErrorMessageAC('Some error.'))
                 }
                 dispatch(setStatusAC("failed"))
+                dispatch(changeEntityStatusAC('failed', todolistId))
             }
-
+        })
+        .catch(err => {
+            dispatch(changeEntityStatusAC('failed', todolistId))
+            dispatch(setStatusAC("failed"))
+            dispatch(setErrorMessageAC(err.message))
         })
 }
 export const updateTaskTC = (taskId: string, domainModel: UpdateDomainTaskModelType, todolistId: string) =>
@@ -116,6 +139,11 @@ export const updateTaskTC = (taskId: string, domainModel: UpdateDomainTaskModelT
                 dispatch(action)
                 dispatch(setStatusAC("succeeded"))
             })
+            .catch(err => {
+                dispatch(changeEntityStatusAC('failed', todolistId))
+                dispatch(setStatusAC("failed"))
+                dispatch(setErrorMessageAC(err.message))
+            })
     }
 
 // types
@@ -139,3 +167,4 @@ type ActionsType =
     | SetTodolistsActionType
     | ReturnType<typeof setTasksAC>
     | AppActionsType
+    | ReturnType<typeof changeEntityStatusAC>

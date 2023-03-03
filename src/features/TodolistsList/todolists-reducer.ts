@@ -67,9 +67,9 @@ export const removeTodolistTC = (todolistId: string) => {
                 dispatch(setStatusAC("succeeded"))
                 // dispatch(changeEntityStatusAC('idle', todolistId))
             }).catch((err) => {
-            dispatch(setStatusAC('loading'))
+            dispatch(setStatusAC('failed'))
             dispatch(changeEntityStatusAC('failed', todolistId))
-            setErrorMessageAC(err.message [0])
+            dispatch(setErrorMessageAC(err.message))
         })
     }
 }
