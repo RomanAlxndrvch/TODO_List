@@ -81,8 +81,7 @@ export const removeTaskTC = (taskId: string, todolistId: string) => (dispatch: D
         })
         .catch(err => {
             dispatch(changeEntityStatusAC('failed', todolistId))
-            dispatch(setStatusAC("failed"))
-            dispatch(setErrorMessageAC(err.message))
+            handleServerNetworkError(dispatch, err.message)
         })
 }
 export const addTaskTC = (title: string, todolistId: string) => (dispatch: Dispatch<ActionsType>) => {
