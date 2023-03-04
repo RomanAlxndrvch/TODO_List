@@ -109,9 +109,8 @@ export const addTaskTC = (title: string, todolistId: string) => (dispatch: Dispa
             }
         })
         .catch(err => {
-            debugger
             dispatch(changeEntityStatusAC('failed', todolistId))
-            handleServerNetworkError(dispatch, err)
+            handleServerNetworkError(dispatch, err.message)
         })
 }
 export const updateTaskTC = (taskId: string, domainModel: UpdateDomainTaskModelType, todolistId: string) =>
