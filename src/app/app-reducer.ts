@@ -1,3 +1,5 @@
+import {changeEntityStatusAC} from "../features/TodolistsList/todolists-reducer";
+
 export type RequestStatusType = 'idle' | 'loading' | 'succeeded' | 'failed'
 
 const initialState = {
@@ -5,7 +7,10 @@ const initialState = {
     error: null as string | null
 }
 type InitialStateType = typeof initialState
-export type AppActionsType = ReturnType<typeof setStatusAC> | ReturnType<typeof setErrorMessageAC>
+export type AppActionsType =
+    ReturnType<typeof setStatusAC>
+    | ReturnType<typeof setErrorMessageAC>
+    | ReturnType<typeof changeEntityStatusAC>
 
 export const appReducer = (state: InitialStateType = initialState, action: AppActionsType): InitialStateType => {
     switch (action.type) {

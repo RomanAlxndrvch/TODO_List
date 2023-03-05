@@ -1,6 +1,7 @@
 import {todolistsAPI, TodolistType} from '../../api/todolists-api'
 import {Dispatch} from 'redux'
 import {AppActionsType, RequestStatusType, setErrorMessageAC, setStatusAC} from "../../app/app-reducer";
+import {handleServerAppError} from "../../utils/error-utils";
 
 const initialState: Array<TodolistDomainType> = []
 
@@ -80,11 +81,9 @@ export const addTodolistTC = (title: string) => {
             .then((res) => {
                 if (res.data.resultCode === 0) {
                     dispatch(addTodolistAC(res.data.data.item))
-                    dispatch(setStatusAC("succeeded"))
                 }
                 if (res.data.resultCode === 1) {
-                    dispatch(setStatusAC("failed"))
-                    dispatch(setErrorMessageAC(res.data.messages[0]))
+                    handleServerAppError(dispatch, res.data, res.data.data.item.id)
                 }
             })
     }

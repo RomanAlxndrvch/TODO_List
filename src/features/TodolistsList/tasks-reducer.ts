@@ -8,7 +8,7 @@ import {TaskPriorities, TaskStatuses, TaskType, todolistsAPI, UpdateTaskModelTyp
 import {Dispatch} from 'redux'
 import {AppRootStateType} from '../../app/store'
 import {AppActionsType, setErrorMessageAC, setStatusAC} from "../../app/app-reducer";
-import {handleServerNetworkError} from "../../utils/error-utils";
+import {handleServerAppError, handleServerNetworkError} from "../../utils/error-utils";
 
 const initialState: TasksStateType = {}
 
@@ -97,14 +97,7 @@ export const addTaskTC = (title: string, todolistId: string) => (dispatch: Dispa
                 dispatch(setStatusAC("succeeded"))
             }
             if (res.data.resultCode === 1) {
-                if (res.data.messages.length) {
-                    dispatch(setErrorMessageAC(res.data.messages[0]))
-                }
-                else {
-                    dispatch(setErrorMessageAC('Some error.'))
-                }
-                dispatch(setStatusAC("failed"))
-                dispatch(changeEntityStatusAC('failed', todolistId))
+                handleServerAppError(dispatch, res.data, todolistId)
             }
         })
         .catch(err => {

@@ -24,6 +24,7 @@ function App() {
 
     const status = useAppSelector<RequestStatusType>(state => state.app.status)
     const dispatch = useAppDispatch()
+    console.log(status)
 
     useEffect(() => {
         dispatch(fetchTodolistsTC())
