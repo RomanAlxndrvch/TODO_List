@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="2.54">
+    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="3.28">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/EditableSpan/EditableSpan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditableSpan/EditableSpan.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/error-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/error-utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,13 +221,7 @@
       <workItem from="1677360620550" duration="12282000" />
       <workItem from="1677812598440" duration="4827000" />
       <workItem from="1677899609272" duration="1680000" />
-    </task>
-    <task id="LOCAL-00010" summary="Lessen 8.&#10;(1:08:41)">
-      <created>1659756010305</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1659756010305</updated>
+      <workItem from="1678062244616" duration="4220000" />
     </task>
     <task id="LOCAL-00011" summary="Lessen 8.">
       <created>1659831657788</created>
@@ -570,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677817791826</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="3.28">
+      <created>1677986334163</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1677986334163</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +584,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sotybook. 12. Add dispatch to task component&#10;2.50.25" />
     <MESSAGE value="Sotybook. 12. Add dispatch to task component. Snapshot" />
     <MESSAGE value="Sotybook. 12." />
     <MESSAGE value="13 52.27" />
@@ -613,6 +608,7 @@
     <MESSAGE value="14. 2.01" />
     <MESSAGE value="14. 2.23" />
     <MESSAGE value="2.54" />
-    <option name="LAST_COMMIT_MESSAGE" value="2.54" />
+    <MESSAGE value="3.28" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.28" />
   </component>
 </project>
