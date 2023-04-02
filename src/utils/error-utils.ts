@@ -1,23 +1,17 @@
-import {AppActionsType, setErrorMessageAC, setStatusAC} from "../app/app-reducer";
-import {Dispatch} from "redux";
-import {AppThunkDispatch} from "../app/store";
-import {changeEntityStatusAC} from "../features/TodolistsList/todolists-reducer";
-import {ResponseType} from "../api/todolists-api";
+import {setAppErrorAC, SetAppErrorActionType, setAppStatusAC, SetAppStatusActionType} from '../app/app-reducer'
+import {ResponseType} from '../api/todolists-api'
+import {Dispatch} from 'redux'
 
-export const handleServerNetworkError = (dispatch: ErrorUtilsDispatchType, err: string) => {
-    dispatch(setStatusAC("failed"))
-    dispatch(setErrorMessageAC(err))
-}
-
-export const handleServerAppError = <T>(dispatch: ErrorUtilsDispatchType, data: ResponseType<T>, todolistId: string) => {
+export const handleServerAppError = <D>(data: ResponseType<D>, dispatch: Dispatch<SetAppErrorActionType | SetAppStatusActionType>) => {
     if (data.messages.length) {
-        dispatch(setErrorMessageAC(data.messages[0]))
+        dispatch(setAppErrorAC(data.messages[0]))
+    } else {
+        dispatch(setAppErrorAC('Some error occurred'))
     }
-    else {
-        dispatch(setErrorMessageAC('Some error.'))
-    }
-    dispatch(changeEntityStatusAC('failed', todolistId))
-    dispatch(setStatusAC("failed"))
+    dispatch(setAppStatusAC('failed'))
 }
 
-type ErrorUtilsDispatchType = Dispatch<AppActionsType>
+export const handleServerNetworkError = (error: { message: string }, dispatch: Dispatch<SetAppErrorActionType | SetAppStatusActionType>) => {
+    dispatch(setAppErrorAC(error.message ? error.message : 'Some error occurred'))
+    dispatch(setAppStatusAC('failed'))
+}

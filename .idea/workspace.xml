@@ -4,25 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="3.28">
+    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="16 34.05">
+      <change afterPath="$PROJECT_DIR$/src/features/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/TODO_List-Main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TODO_List-Main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/preview.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/addItemForm.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/jest.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/integration/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/todolists-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/todolists-api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddItemForm/AddItemForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditableSpan/EditableSpan.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditableSpan/EditableSpan.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ErrorSnackbar/ErrorSnackbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ErrorSnackbar/ErrorSnackbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/Todolist/Task/Task.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/Todolist/Task/Task.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/Todolist/Todolist.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/Todolist/Todolist.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/TodolistsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/TodolistsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists-reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/error-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/error-utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="TypeScript JSX File" />
-        <option value="TypeScript File" />
-      </list>
-    </option>
-  </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,68 +44,26 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Aawfocnpk9X5teKq6Cqq6t8DLm" />
+  <component name="ProjectId" id="2NpoIwJ4WGjxTpgbcnAUYld5gHL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;H:/WebStormProjects/TODO_List-Main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;H:/WebStormProjects/TODO_List-Main/node_modules/react-scripts&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;H:\\WebStormProjects\\TODO_List-Main\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "H:\\WebStormProjects\\TODO_List-Main\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\WebStormProjects\TODO_List-Main\src" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\Task" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\EditableSpan" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\AddItemForm" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\EditableSpan\ErrorSnackbar" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\unused" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\TodoList" />
-      <recent name="H:\WebStormProjects\TODO_List-Main\src\components\Task" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Jest.correct todolist should change its name">
-    <configuration name="correct todolist should change its name" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/src/reducers/todolists-reducer.test.ts" />
-      <test-names>
-        <test-name value="correct todolist should change its name" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="jest:integration" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="jest:integration" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
+}]]></component>
+  <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -102,471 +74,22 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="storybook" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="storybook" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test:integration" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:integration" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.storybook" />
-        <item itemvalue="npm.test:integration" />
-        <item itemvalue="npm.jest:integration" />
-        <item itemvalue="Jest.correct todolist should change its name" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="654c36ad-ed53-4350-bcc3-10905faf8663" name="Changes" comment="" />
-      <created>1655261109755</created>
+      <changelist id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="" />
+      <created>1680370307952</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655261109755</updated>
-      <workItem from="1655261111611" duration="6190000" />
-      <workItem from="1655343306487" duration="10987000" />
-      <workItem from="1655428762363" duration="3305000" />
-      <workItem from="1655947564603" duration="11343000" />
-      <workItem from="1655959042045" duration="421000" />
-      <workItem from="1656033804018" duration="8749000" />
-      <workItem from="1656129085749" duration="222000" />
-      <workItem from="1656129361234" duration="15000" />
-      <workItem from="1656131198000" duration="38000" />
-      <workItem from="1656172840438" duration="52000" />
-      <workItem from="1656172914090" duration="9000" />
-      <workItem from="1657485294679" duration="1587000" />
-      <workItem from="1657494466384" duration="10908000" />
-      <workItem from="1657589383574" duration="7381000" />
-      <workItem from="1658078132645" duration="489000" />
-      <workItem from="1658615884764" duration="2616000" />
-      <workItem from="1658675505589" duration="14401000" />
-      <workItem from="1658711586952" duration="1694000" />
-      <workItem from="1659580562904" duration="3898000" />
-      <workItem from="1659659514652" duration="4304000" />
-      <workItem from="1659753534124" duration="2480000" />
-      <workItem from="1659827836491" duration="2060000" />
-      <workItem from="1660792388620" duration="1894000" />
-      <workItem from="1660872001819" duration="11091000" />
-      <workItem from="1660964170632" duration="1650000" />
-      <workItem from="1661306730749" duration="3000" />
-      <workItem from="1662323088815" duration="4656000" />
-      <workItem from="1662415427546" duration="13221000" />
-      <workItem from="1662433400645" duration="3396000" />
-      <workItem from="1662512514598" duration="8034000" />
-      <workItem from="1663515555441" duration="17415000" />
-      <workItem from="1663637439748" duration="3097000" />
-      <workItem from="1663642227824" duration="3085000" />
-      <workItem from="1663721706005" duration="9369000" />
-      <workItem from="1663809873799" duration="5213000" />
-      <workItem from="1665710780215" duration="5075000" />
-      <workItem from="1665716281241" duration="3447000" />
-      <workItem from="1665882785175" duration="6007000" />
-      <workItem from="1665950986161" duration="9106000" />
-      <workItem from="1666056845104" duration="5951000" />
-      <workItem from="1666834456328" duration="1042000" />
-      <workItem from="1668391916729" duration="354000" />
-      <workItem from="1668392293243" duration="44000" />
-      <workItem from="1668392356742" duration="387000" />
-      <workItem from="1668392766548" duration="233000" />
-      <workItem from="1668393020189" duration="1119000" />
-      <workItem from="1668394170734" duration="401000" />
-      <workItem from="1668394658292" duration="195000" />
-      <workItem from="1668394872826" duration="343000" />
-      <workItem from="1668395275387" duration="211000" />
-      <workItem from="1668395506039" duration="278000" />
-      <workItem from="1668395807085" duration="2735000" />
-      <workItem from="1668482460263" duration="2131000" />
-      <workItem from="1668569496903" duration="3812000" />
-      <workItem from="1668653660794" duration="3757000" />
-      <workItem from="1668741095124" duration="4728000" />
-      <workItem from="1668903626533" duration="9617000" />
-      <workItem from="1668996692643" duration="6033000" />
-      <workItem from="1669083770435" duration="10491000" />
-      <workItem from="1669171023280" duration="3598000" />
-      <workItem from="1669174719149" duration="2120000" />
-      <workItem from="1669176963803" duration="82000" />
-      <workItem from="1672611478443" duration="53000" />
-      <workItem from="1672611610053" duration="644000" />
-      <workItem from="1675999082333" duration="3393000" />
-      <workItem from="1676158176332" duration="2681000" />
-      <workItem from="1676163194892" duration="4867000" />
-      <workItem from="1676233528070" duration="4174000" />
-      <workItem from="1676344913649" duration="4126000" />
-      <workItem from="1676516816120" duration="3734000" />
-      <workItem from="1676601373444" duration="5743000" />
-      <workItem from="1676761388007" duration="71000" />
-      <workItem from="1676761515721" duration="8839000" />
-      <workItem from="1676845802468" duration="8246000" />
-      <workItem from="1676929954297" duration="987000" />
-      <workItem from="1676931100458" duration="6125000" />
-      <workItem from="1677119571949" duration="6884000" />
-      <workItem from="1677208533986" duration="4257000" />
-      <workItem from="1677360620550" duration="12282000" />
-      <workItem from="1677812598440" duration="4827000" />
-      <workItem from="1677899609272" duration="1680000" />
-      <workItem from="1678062244616" duration="4220000" />
+      <updated>1680370307952</updated>
+      <workItem from="1680370314864" duration="8225000" />
     </task>
-    <task id="LOCAL-00011" summary="Lessen 8.">
-      <created>1659831657788</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1659831657788</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Lessen 9. 2:52:16">
-      <created>1660884574051</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1660884574052</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Lessen 9.">
-      <created>1660965785540</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1660965785540</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Lessen 10. 01:04:35">
-      <created>1662351736469</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1662351736469</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Lessen 10.">
-      <created>1662437077497</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1662437077497</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Lessen 10. #2&#10;New Todolist,move logic from app.tsx to todolist.tsx">
-      <created>1662520638378</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1662520638378</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Lessen 11. React.memo,useCallback. 2.26.17">
-      <created>1663553180507</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1663553180507</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Lessen 11. React.memo,useCallback. 2.35.44">
-      <created>1663649415855</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1663649415855</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Lessen 11. React.memo,useCallback. 3.04.15">
-      <created>1663735022651</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1663735022651</updated>
-    </task>
-    <task id="LOCAL-00020" summary="11. React.memo,useCallback.">
-      <created>1663816886484</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1663816886484</updated>
-    </task>
-    <task id="LOCAL-00021" summary="refactor">
-      <created>1665712497080</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1665712497080</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Sotybook. 12&#10;1.19.48">
-      <created>1665722527460</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1665722527461</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Sotybook. 12. Add dispatch to task component&#10;1.42.52">
-      <created>1665890107731</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1665890107731</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Sotybook. 12. Add dispatch to task component&#10;2.50.25">
-      <created>1665974677191</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1665974677191</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Sotybook. 12. Add dispatch to task component. Snapshot">
-      <created>1666065441034</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1666065441034</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Sotybook. 12.">
-      <created>1668398520651</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1668398520651</updated>
-    </task>
-    <task id="LOCAL-00027" summary="13 52.27">
-      <created>1668486323163</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1668486323163</updated>
-    </task>
-    <task id="LOCAL-00028" summary="13 52.27">
-      <created>1668573955189</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1668573955189</updated>
-    </task>
-    <task id="LOCAL-00029" summary="13 1.34">
-      <created>1668663232693</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1668663232693</updated>
-    </task>
-    <task id="LOCAL-00030" summary="13 2,11">
-      <created>1668747798214</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1668747798214</updated>
-    </task>
-    <task id="LOCAL-00031" summary="13 2,11">
-      <created>1668748550217</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1668748550217</updated>
-    </task>
-    <task id="LOCAL-00032" summary="13">
-      <created>1668915607357</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1668915607357</updated>
-    </task>
-    <task id="LOCAL-00033" summary="13. Task Logic">
-      <created>1669003622031</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1669003622031</updated>
-    </task>
-    <task id="LOCAL-00034" summary="13. Api types">
-      <created>1669095937185</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1669095937185</updated>
-    </task>
-    <task id="LOCAL-00035" summary="13. Api types">
-      <created>1669176816741</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1669176816741</updated>
-    </task>
-    <task id="LOCAL-00036" summary="13. Api types">
-      <created>1672611858680</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1672611858680</updated>
-    </task>
-    <task id="LOCAL-00037" summary="13. Api types">
-      <created>1672611895707</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1672611895707</updated>
-    </task>
-    <task id="LOCAL-00038" summary="14 23.00">
-      <created>1676004849960</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1676004849960</updated>
-    </task>
-    <task id="LOCAL-00039" summary="14 23.00">
-      <created>1676004920319</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1676004920319</updated>
-    </task>
-    <task id="LOCAL-00040" summary="14 23.00">
-      <created>1676005204539</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1676005204539</updated>
-    </task>
-    <task id="LOCAL-00041" summary="14 23.00">
-      <created>1676005347084</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1676005347084</updated>
-    </task>
-    <task id="LOCAL-00042" summary="14 29.00">
-      <created>1676163230022</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1676163230022</updated>
-    </task>
-    <task id="LOCAL-00043" summary="14 01.00">
-      <created>1676169662939</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1676169662939</updated>
-    </task>
-    <task id="LOCAL-00044" summary="14 01.12">
-      <created>1676241429234</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1676241429234</updated>
-    </task>
-    <task id="LOCAL-00045" summary="14 01.25">
-      <created>1676350090550</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1676350090550</updated>
-    </task>
-    <task id="LOCAL-00046" summary="14 1.53">
-      <created>1676523352424</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1676523352424</updated>
-    </task>
-    <task id="LOCAL-00047" summary="14 2.32">
-      <created>1676609427755</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1676609427755</updated>
-    </task>
-    <task id="LOCAL-00048" summary="14 3,19">
-      <created>1676774746616</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1676774746616</updated>
-    </task>
-    <task id="LOCAL-00049" summary="14">
-      <created>1676858053339</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1676858053339</updated>
-    </task>
-    <task id="LOCAL-00050" summary="14. 00\00">
-      <created>1676931458404</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1676931458404</updated>
-    </task>
-    <task id="LOCAL-00051" summary="14. 00\00">
-      <created>1676932463673</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1676932463673</updated>
-    </task>
-    <task id="LOCAL-00052" summary="14. 23.00">
-      <created>1676940565336</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1676940565336</updated>
-    </task>
-    <task id="LOCAL-00053" summary="14. 54.00">
-      <created>1677126040668</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1677126040668</updated>
-    </task>
-    <task id="LOCAL-00054" summary="14. 54.00">
-      <created>1677126642733</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1677126642733</updated>
-    </task>
-    <task id="LOCAL-00055" summary="14. 1.17.00">
-      <created>1677213352066</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1677213352067</updated>
-    </task>
-    <task id="LOCAL-00056" summary="14. 2.01">
-      <created>1677367715485</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1677367715485</updated>
-    </task>
-    <task id="LOCAL-00057" summary="14. 2.23">
-      <created>1677449987839</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1677449987839</updated>
-    </task>
-    <task id="LOCAL-00058" summary="2.54">
-      <created>1677817791826</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1677817791826</updated>
-    </task>
-    <task id="LOCAL-00059" summary="3.28">
-      <created>1677986334163</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1677986334163</updated>
-    </task>
-    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -584,31 +107,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Sotybook. 12. Add dispatch to task component. Snapshot" />
-    <MESSAGE value="Sotybook. 12." />
-    <MESSAGE value="13 52.27" />
-    <MESSAGE value="13 1.34" />
-    <MESSAGE value="13 2,11" />
-    <MESSAGE value="13" />
-    <MESSAGE value="13. Task Logic" />
-    <MESSAGE value="13. Api types" />
-    <MESSAGE value="14 23.00" />
-    <MESSAGE value="14 29.00" />
-    <MESSAGE value="14 01.00" />
-    <MESSAGE value="14 01.12" />
-    <MESSAGE value="14 01.25" />
-    <MESSAGE value="14 1.53" />
-    <MESSAGE value="14 2.32" />
-    <MESSAGE value="14 3,19" />
-    <MESSAGE value="14" />
-    <MESSAGE value="14. 00\00" />
-    <MESSAGE value="14. 23.00" />
-    <MESSAGE value="14. 54.00" />
-    <MESSAGE value="14. 1.17.00" />
-    <MESSAGE value="14. 2.01" />
-    <MESSAGE value="14. 2.23" />
-    <MESSAGE value="2.54" />
-    <MESSAGE value="3.28" />
-    <option name="LAST_COMMIT_MESSAGE" value="3.28" />
+    <MESSAGE value="16 34.05" />
+    <option name="LAST_COMMIT_MESSAGE" value="16 34.05" />
   </component>
 </project>
