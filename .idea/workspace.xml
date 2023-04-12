@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="16. 1.08.57">
+    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="16. 1.16.52">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Login/Login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,8 @@
       <workItem from="1680834228799" duration="212000" />
       <workItem from="1680834661258" duration="614000" />
       <workItem from="1681080964013" duration="5446000" />
-      <workItem from="1681179387417" duration="4812000" />
+      <workItem from="1681179387417" duration="4904000" />
+      <workItem from="1681266508519" duration="5317000" />
     </task>
     <task id="LOCAL-00001" summary="16 34.05">
       <created>1680398356491</created>
@@ -97,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681092225631</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="16. 1.16.52">
+      <created>1681184819586</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681184819586</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,6 +124,7 @@
     <MESSAGE value="16 34.05" />
     <MESSAGE value="16" />
     <MESSAGE value="16. 1.08.57" />
-    <option name="LAST_COMMIT_MESSAGE" value="16. 1.08.57" />
+    <MESSAGE value="16. 1.16.52" />
+    <option name="LAST_COMMIT_MESSAGE" value="16. 1.16.52" />
   </component>
 </project>

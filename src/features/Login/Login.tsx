@@ -9,6 +9,12 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {useFormik} from "formik";
 
+type FormikErrorType = {
+    email?: string
+    password?: string
+    rememberMe?: boolean
+}
+
 export const Login = () => {
 
     const formik = useFormik({
@@ -17,39 +23,53 @@ export const Login = () => {
             password: '',
             rememberMe: false
         },
-        onSubmit: values => {
-            console.log(values.email)
+        validate: (values) => {
+            const errors: FormikErrorType = {}
+            if (!values.email) {
+                errors.email = 'Required'
+            }
+            if (values.password.length < 4) {
+                errors.password = 'Password to short'
+            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                errors.email = 'Invalid email address'
+            }
+            return errors
         },
-
+        onSubmit: values => {
+            console.log(values)
+        },
     });
-
 
     return <Grid container justifyContent={'center'}>
         <Grid item justifyContent={'center'}>
-            <form onSubmit={formik.handleSubmit}>
-                <FormControl>
-                    <FormLabel>
-                        <p>To log in get registered
-                            <a href={'https://social-network.samuraijs.com/'}
-                               target={'_blank'}> here
-                            </a>
-                        </p>
-                        <p>or use common test account credentials:</p>
-                        <p>Email: free@samuraijs.com</p>
-                        <p>Password: free</p>
-                    </FormLabel>
+            <FormControl>
+                <FormLabel>
+                    <p>To log in get registered
+                        <a href={'https://social-network.samuraijs.com/'}
+                           target={'_blank'}> here
+                        </a>
+                    </p>
+                    <p>or use common test account credentials:</p>
+                    <p>Email: free@samuraijs.com</p>
+                    <p>Password: free</p>
+                </FormLabel>
+                <form onSubmit={formik.handleSubmit}>
                     <FormGroup>
-                        <TextField label="Email"
+                        <TextField label={formik.errors.email ? formik.errors.email : 'Email'}
                                    margin="normal"
                                    name='email'
                                    onChange={formik.handleChange}
-                                   value={formik.values.email}/>
+                                   value={formik.values.email}
+                                   error={!!formik.errors.email}
+                        />
+
                         <TextField type="password"
-                                   label="Password"
+                                   label={formik.errors.password ? formik.errors.password : 'Password'}
                                    margin="normal"
                                    name='password'
                                    onChange={formik.handleChange}
                                    value={formik.values.password}
+                                   error={!!formik.errors.password}
                         />
                         <FormControlLabel
                             label={'Remember me'}
@@ -61,8 +81,8 @@ export const Login = () => {
                             Login
                         </Button>
                     </FormGroup>
-                </FormControl>
-            </form>
+                </form>
+            </FormControl>
         </Grid>
     </Grid>
 }
