@@ -1,4 +1,4 @@
-import React, {FormEventHandler} from 'react'
+import React, {FormEventHandler, useState} from 'react'
 import Grid from '@mui/material/Grid';
 import Checkbox from '@mui/material/Checkbox';
 import FormControl from '@mui/material/FormControl';
@@ -8,6 +8,10 @@ import FormLabel from '@mui/material/FormLabel';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {useFormik} from "formik";
+import {useAppDispatch} from "../../app/store";
+import {Navigate} from "react-router-dom";
+import {fetchTodolistsTC} from "../TodolistsList/todolists-reducer";
+import {loginTC} from "./auth-reducer";
 
 type FormikErrorType = {
     email?: string
@@ -17,6 +21,7 @@ type FormikErrorType = {
 
 export const Login = () => {
 
+    const dispatch = useAppDispatch()
     const formik = useFormik({
         initialValues: {
             email: '',
@@ -38,8 +43,9 @@ export const Login = () => {
         },
         onSubmit: values => {
             console.log(values)
+            dispatch(loginTC(values))
             formik.resetForm()
-        },
+        }
     });
 
     return <Grid container justifyContent={'center'}>
@@ -84,4 +90,5 @@ export const Login = () => {
             </FormControl>
         </Grid>
     </Grid>
+
 }
