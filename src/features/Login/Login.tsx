@@ -19,6 +19,12 @@ type FormikErrorType = {
     rememberMe?: boolean
 }
 
+export type FormDataType = {
+    email: string,
+    password: string
+    rememberMe?: boolean
+}
+
 export const Login = () => {
 
     const dispatch = useAppDispatch()

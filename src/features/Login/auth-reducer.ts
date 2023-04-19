@@ -1,5 +1,7 @@
 import {Dispatch} from "redux";
 import {SetAppErrorActionType, setAppStatusAC, SetAppStatusActionType} from "../../app/app-reducer";
+import {authAPI} from "../../api/todolists-api";
+import {FormDataType} from "./Login";
 
 type authReducerStateType = typeof initialState
 
@@ -25,8 +27,16 @@ export const loginInAc = (value: boolean) => {
 }
 
 //thunk
-export const loginTC = (data: any) => (dispatch: Dispatch<authReducerActionType>) => {
+export const loginTC = (data: FormDataType) => async (dispatch: Dispatch<authReducerActionType>) => {
+    const loginReturnData = await authAPI.login(data.email, data.password)
     dispatch(setAppStatusAC('loading'))
+  
+    if (loginReturnData.data.resultCode === 0) {
+        console.log(loginReturnData)
+        loginInAc(true)
+        dispatch(setAppStatusAC('succeeded'))
+    }
+
 }
 
 

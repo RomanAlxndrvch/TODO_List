@@ -12,12 +12,13 @@ import Container from '@mui/material/Container';
 import LinearProgress from '@mui/material/LinearProgress';
 import {Menu} from '@mui/icons-material';
 import {ErrorSnackbar} from '../components/ErrorSnackbar/ErrorSnackbar'
-import {Navigate, NavLink, Route, Routes} from "react-router-dom";
+import {Navigate, NavLink, redirect, Route, Routes} from "react-router-dom";
 import {Login} from "../features/Login/Login";
-
 
 function App() {
     const status = useAppSelector<RequestStatusType>((state) => state.app.status)
+
+
     return (
         <div className="App">
             <ErrorSnackbar/>
