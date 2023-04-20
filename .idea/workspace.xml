@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="16. 2,44">
+    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="16. 2,52">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/todolists-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/todolists-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Login/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Login/auth-reducer.ts" afterDir="false" />
     </list>
@@ -80,7 +78,8 @@
       <workItem from="1681266508519" duration="5356000" />
       <workItem from="1681590573298" duration="15019000" />
       <workItem from="1681781745378" duration="6145000" />
-      <workItem from="1681872703248" duration="4186000" />
+      <workItem from="1681872703248" duration="4263000" />
+      <workItem from="1681957053792" duration="4332000" />
     </task>
     <task id="LOCAL-00001" summary="16 34.05">
       <created>1680398356491</created>
@@ -131,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681788816823</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="16. 2,52">
+      <created>1681876999190</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681876999190</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +162,7 @@
     <MESSAGE value="16. 1.53.23" />
     <MESSAGE value="16. 2,39" />
     <MESSAGE value="16. 2,44" />
-    <option name="LAST_COMMIT_MESSAGE" value="16. 2,44" />
+    <MESSAGE value="16. 2,52" />
+    <option name="LAST_COMMIT_MESSAGE" value="16. 2,52" />
   </component>
 </project>

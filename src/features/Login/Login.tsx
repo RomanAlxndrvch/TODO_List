@@ -9,8 +9,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {useFormik} from "formik";
 import {useAppDispatch} from "../../app/store";
-import {Navigate} from "react-router-dom";
-import {fetchTodolistsTC} from "../TodolistsList/todolists-reducer";
 import {loginTC} from "./auth-reducer";
 
 type FormikErrorType = {
@@ -24,6 +22,7 @@ export type FormDataType = {
     password: string
     rememberMe?: boolean
 }
+
 
 export const Login = () => {
 
@@ -50,7 +49,6 @@ export const Login = () => {
         onSubmit: values => {
             console.log(values)
             dispatch(loginTC(values))
-            formik.resetForm()
         }
     });
 

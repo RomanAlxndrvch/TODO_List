@@ -12,10 +12,10 @@ const instance = axios.create({
 
 //auth
 export const authAPI = {
-    login(email: string, password: string) {
+    login(data: FormDataType) {
         return instance.post<FormDataType, AxiosResponse<ResponseType<{
             userId: string
-        }>>>('auth/login', {email, password})
+        }>>>('auth/login', {email: data.email, password: data.password, rememberMe: data.rememberMe})
     }
 }
 
@@ -81,6 +81,12 @@ export enum TaskPriorities {
     Hi = 2,
     Urgently = 3,
     Later = 4
+}
+
+export enum Result_Code {
+    Ok = 0,
+    Error = 1,
+    Captcha = 10
 }
 
 export type TaskType = {
