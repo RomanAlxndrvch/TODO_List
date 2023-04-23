@@ -16,6 +16,9 @@ export const authAPI = {
         return instance.post<FormDataType, AxiosResponse<ResponseType<{
             userId: string
         }>>>('auth/login', {email: data.email, password: data.password, rememberMe: data.rememberMe})
+    },
+    me() {
+        return instance.get('auth/me')
     }
 }
 

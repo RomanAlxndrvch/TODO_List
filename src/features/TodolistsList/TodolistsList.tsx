@@ -29,9 +29,11 @@ export const TodolistsList: React.FC = () => {
     }
 
     useEffect(() => {
-        const thunk = fetchTodolistsTC()
-        dispatch(thunk)
+        if (isLoginIn) {
+            dispatch(fetchTodolistsTC())
+        }
     }, [])
+
 
     const removeTask = useCallback(function (id: string, todolistId: string) {
         const thunk = removeTaskTC(id, todolistId)
