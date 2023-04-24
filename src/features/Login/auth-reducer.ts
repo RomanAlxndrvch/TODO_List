@@ -45,4 +45,17 @@ export const loginTC = (data: FormDataType) => async (dispatch: Dispatch<authRed
 
 }
 
+export const initializeAppTC = () => async (dispatch: Dispatch<authReducerActionType>) => {
+    const initializeReturnData = await authAPI.me()
+    dispatch(setAppStatusAC('loading'))
+    try {
+        if (initializeReturnData.data.resultCode === Result_Code.Ok) dispatch(setIsloginInAc(true))
+        if (initializeReturnData.data.resultCode === Result_Code.Error) dispatch(setIsloginInAc(false))
+    } catch (err: any) {
+        handleServerNetworkError(err, dispatch)
+    } finally {
+        dispatch(setAppStatusAC('succeeded'))
+    }
+}
+
 
