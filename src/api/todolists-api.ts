@@ -17,6 +17,9 @@ export const authAPI = {
             userId: string
         }>>>('auth/login', {email: data.email, password: data.password, rememberMe: data.rememberMe})
     },
+    logout() {
+        return instance.delete<AxiosResponse<ResponseType>>('auth/login').then(res => res.data)
+    },
     me() {
         return instance.get<ResponseType<{ id: string, email: string, login: string }>>('auth/me')
     }

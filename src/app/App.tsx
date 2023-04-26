@@ -14,18 +14,23 @@ import {Menu} from '@mui/icons-material';
 import {ErrorSnackbar} from '../components/ErrorSnackbar/ErrorSnackbar'
 import {Navigate, NavLink, redirect, Route, Routes} from "react-router-dom";
 import {Login} from "../features/Login/Login";
-import {initializeAppTC} from "../features/Login/auth-reducer";
+import {initializeAppTC, logoutTC} from "../features/Login/auth-reducer";
 import {CircularProgress} from "@mui/material";
 
 function App() {
     const dispatch = useAppDispatch()
     const status = useAppSelector<RequestStatusType>((state) => state.app.status)
     const isInitialized = useAppSelector<boolean>(state => state.auth.isInitialized)
+    const isLogIn = useAppSelector(state => state.auth.isLoggedIn)
+
+    const onLogoutBtnHandler = () => {
+        isLogIn && dispatch(logoutTC())
+    }
 
     useEffect(() => {
         dispatch(initializeAppTC())
     }, [])
-    
+
     if (!isInitialized) {
         return <div
             style={{position: 'fixed', top: '30%', textAlign: 'center', width: '100%'}}>
@@ -45,9 +50,9 @@ function App() {
                     <Typography variant="h6">
                         News
                     </Typography>
-                    <Button color="inherit" href={'/login'}>
-                        Login
-                    </Button>
+                    {isLogIn && <Button color="inherit" href={'/login'} onClick={onLogoutBtnHandler}>
+                        Logout
+                    </Button>}
                 </Toolbar>
                 {status === 'loading' && <LinearProgress/>}
 

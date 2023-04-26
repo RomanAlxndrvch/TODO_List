@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="16. 3.53">
+    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="16. 3.12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/todolists-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/todolists-api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/Login/auth-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/Login/auth-reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks-reducer.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,8 @@
       <workItem from="1682043604588" duration="3487000" />
       <workItem from="1682216706760" duration="3419000" />
       <workItem from="1682277290710" duration="7461000" />
-      <workItem from="1682390166568" duration="3585000" />
+      <workItem from="1682390166568" duration="4352000" />
+      <workItem from="1682475097001" duration="5112000" />
     </task>
     <task id="LOCAL-00001" summary="16 34.05">
       <created>1680398356491</created>
@@ -177,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682301505312</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="16. 3.12">
+      <created>1682394986898</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682394986898</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +215,7 @@
     <MESSAGE value="16. 3.28" />
     <MESSAGE value="16. 3.43" />
     <MESSAGE value="16. 3.53" />
-    <option name="LAST_COMMIT_MESSAGE" value="16. 3.53" />
+    <MESSAGE value="16. 3.12" />
+    <option name="LAST_COMMIT_MESSAGE" value="16. 3.12" />
   </component>
 </project>
