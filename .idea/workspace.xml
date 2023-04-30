@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="16.">
+    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="17,Redux Toolkit,10.27">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +86,8 @@
       <workItem from="1682557533712" duration="244000" />
       <workItem from="1682653621703" duration="684000" />
       <workItem from="1682794265395" duration="127000" />
-      <workItem from="1682794457893" duration="4819000" />
+      <workItem from="1682794457893" duration="5560000" />
+      <workItem from="1682870319307" duration="2641000" />
     </task>
     <task id="LOCAL-00001" summary="16 34.05">
       <created>1680398356491</created>
@@ -194,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682481831646</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="17,Redux Toolkit,10.27">
+      <created>1682802034480</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682802034480</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +234,7 @@
     <MESSAGE value="16. 3.53" />
     <MESSAGE value="16. 3.12" />
     <MESSAGE value="16." />
-    <option name="LAST_COMMIT_MESSAGE" value="16." />
+    <MESSAGE value="17,Redux Toolkit,10.27" />
+    <option name="LAST_COMMIT_MESSAGE" value="17,Redux Toolkit,10.27" />
   </component>
 </project>
