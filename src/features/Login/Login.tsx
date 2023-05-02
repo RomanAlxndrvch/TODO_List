@@ -9,8 +9,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import {useFormik} from "formik";
 import {useAppDispatch, useAppSelector} from "../../app/store";
-import {loginTC} from "./auth-reducer";
 import {Navigate} from "react-router-dom";
+import {loginTC} from "./main-auth-reducer";
 
 type FormikErrorType = {
     email?: string

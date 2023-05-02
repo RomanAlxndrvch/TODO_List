@@ -14,8 +14,9 @@ import {Menu} from '@mui/icons-material';
 import {ErrorSnackbar} from '../components/ErrorSnackbar/ErrorSnackbar'
 import {Navigate, NavLink, redirect, Route, Routes} from "react-router-dom";
 import {Login} from "../features/Login/Login";
-import {initializeAppTC, logoutTC} from "../features/Login/auth-reducer";
+
 import {CircularProgress} from "@mui/material";
+import {initializeAppTC, logoutTC} from "../features/Login/main-auth-reducer";
 
 function App() {
     const dispatch = useAppDispatch()
@@ -24,7 +25,7 @@ function App() {
     const isLogIn = useAppSelector(state => state.auth.isLoggedIn)
 
     const onLogoutBtnHandler = () => {
-        isLogIn && dispatch(logoutTC())
+        dispatch(logoutTC())
     }
 
     useEffect(() => {

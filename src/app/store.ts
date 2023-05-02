@@ -4,8 +4,9 @@ import {Action, AnyAction, applyMiddleware, combineReducers, legacy_createStore,
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 import thunkMiddleware, {ThunkDispatch} from 'redux-thunk'
 import {appReducer} from './app-reducer'
-import {authReducer} from "../features/Login/auth-reducer";
+
 import {configureStore} from "@reduxjs/toolkit";
+import {authReducer, setIsInitializedAC, setIsloginInAc} from "../features/Login/main-auth-reducer";
 
 
 // объединяя reducer-ы с помощью combineReducers,
@@ -19,7 +20,7 @@ const rootReducer = combineReducers({
 
 export const store = configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().prepend(thunkMiddleware,)
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().prepend(thunkMiddleware)
 })
 
 
