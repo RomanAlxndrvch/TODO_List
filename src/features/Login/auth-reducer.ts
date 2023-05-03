@@ -1,8 +1,9 @@
 import {Dispatch} from "redux";
-import {SetAppErrorActionType, setAppStatusAC, SetAppStatusActionType} from "../../app/app-reducer";
+/*import {SetAppErrorActionType, setAppStatusAC, SetAppStatusActionType} from "../../app/app-reducer";*/
 import {authAPI, Result_Code} from "../../api/todolists-api";
 import {FormDataType} from "./Login";
 import {handleServerAppError, handleServerNetworkError} from "../../utils/error-utils";
+import {setAppStatusAC} from "../../app/main-app-reducer";
 
 type authReducerStateType = typeof initialState
 
@@ -15,8 +16,7 @@ const initialState = {
 type authReducerActionType =
     ReturnType<typeof setIsloginInAc>
     | ReturnType<typeof setIsInitializedAC>
-    | SetAppStatusActionType
-    | SetAppErrorActionType
+
 
 export const authReducer = (state: authReducerStateType = initialState, action: authReducerActionType) => {
     switch (action.type) {
@@ -40,9 +40,9 @@ export const setIsInitializedAC = (status: boolean) => {
 }
 
 //thunk
-export const loginTC = (data: FormDataType) => async (dispatch: Dispatch<authReducerActionType>) => {
+export const loginTC = (data: FormDataType) => async (dispatch: Dispatch) => {
     const loginReturnData = await authAPI.login(data)
-    dispatch(setAppStatusAC('loading'))
+    dispatch(setAppStatusAC({status: 'loading'}))
     try {
         if (loginReturnData.data.resultCode === Result_Code.Ok) {
             dispatch(setIsloginInAc(true))
@@ -53,14 +53,14 @@ export const loginTC = (data: FormDataType) => async (dispatch: Dispatch<authRed
     } catch (err: any) {
         handleServerNetworkError(err, dispatch)
     } finally {
-        dispatch((setAppStatusAC('succeeded')))
+        dispatch((setAppStatusAC({status: 'succeeded'})))
     }
 
 }
 
-export const logoutTC = () => async (dispatch: Dispatch<authReducerActionType>) => {
+export const logoutTC = () => async (dispatch: Dispatch) => {
     const loginReturnData = await authAPI.logout()
-    dispatch(setAppStatusAC('loading'))
+    dispatch(setAppStatusAC({status: 'loading'}))
     try {
         if (loginReturnData.data.resultCode === Result_Code.Ok) {
             dispatch(setIsloginInAc(false))
@@ -71,7 +71,7 @@ export const logoutTC = () => async (dispatch: Dispatch<authReducerActionType>) 
     } catch (err: any) {
         handleServerNetworkError(err, dispatch)
     } finally {
-        dispatch((setAppStatusAC('succeeded')))
+        dispatch((setAppStatusAC({status: 'succeeded'})))
     }
 
 }

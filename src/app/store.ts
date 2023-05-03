@@ -3,10 +3,10 @@ import {todolistsReducer} from '../features/TodolistsList/todolists-reducer';
 import {Action, AnyAction, applyMiddleware, combineReducers, legacy_createStore, Middleware} from 'redux'
 import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
 import thunkMiddleware, {ThunkDispatch} from 'redux-thunk'
-import {appReducer} from './app-reducer'
 
 import {configureStore} from "@reduxjs/toolkit";
 import {authReducer, setIsInitializedAC, setIsloginInAc} from "../features/Login/main-auth-reducer";
+import {appReducer} from "./main-app-reducer";
 
 
 // объединяя reducer-ы с помощью combineReducers,
