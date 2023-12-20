@@ -4,8 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="17,Redux Toolkit,42">
+    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="20">
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.reducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app.selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/actions/common.actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/actions/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/api/common.api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/api/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/components/AddItemForm/AddItemForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/components/EditableSpan/EditableSpan.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/components/ErrorSnackbar/ErrorSnackbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/components/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/enums/common.enums.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/enums/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/hooks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/hooks/useActions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/hooks/useAppDispatch.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/types/common.types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/types/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/create-app-async-thunk.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/handle-server-app-error.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/handle-server-network-error.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils/thunk-try-catch.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks.reducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TodolistsList/tasks.selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists-tasks.reducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists.api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists.reducer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/TodolistsList/todolists.selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/api/auth.api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/model/auth.selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/model/auth.slice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/login/Login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/ui/login/login.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/serviceWorker.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,28 +60,32 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2NpoIwJ4WGjxTpgbcnAUYld5gHL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;H:/WebStormProjects/TODO_List-Main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;H:\\WebStormProjects\\TODO_List-Main\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/WebStormProjects/TODO_List-Main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "D:\\WebStormProjects\\TODO_List-Main\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "ts.external.directory.path": "D:\\WebStormProjects\\TODO_List-Main\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -94,6 +137,7 @@
       <workItem from="1683082818405" duration="4121000" />
       <workItem from="1683393835163" duration="2975000" />
       <workItem from="1683422425467" duration="17000" />
+      <workItem from="1703040118071" duration="2157000" />
     </task>
     <task id="LOCAL-00001" summary="16 34.05">
       <created>1680398356491</created>
@@ -228,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1683086956320</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="20">
+      <option name="closed" value="true" />
+      <created>1703040225357</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703040225357</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +317,7 @@
     <MESSAGE value="17,Redux Toolkit,17.30" />
     <MESSAGE value="17,Redux Toolkit,39.02" />
     <MESSAGE value="17,Redux Toolkit,42" />
-    <option name="LAST_COMMIT_MESSAGE" value="17,Redux Toolkit,42" />
+    <MESSAGE value="20" />
+    <option name="LAST_COMMIT_MESSAGE" value="20" />
   </component>
 </project>
