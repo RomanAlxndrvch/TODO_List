@@ -1,16 +1,20 @@
 import React, { useCallback, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { FilterValuesType, todolistsActions, todolistsThunks } from "features/TodolistsList/todolists.reducer";
-import { tasksThunks } from "features/TodolistsList/tasks.reducer";
+import {
+  FilterValuesType,
+  todolistsActions,
+  todolistsThunks,
+} from "features/TodolistsList/model/todolists/todolists.reducer";
+import { tasksThunks } from "features/TodolistsList/model/tasks/taskSlice";
 import { Grid, Paper } from "@mui/material";
-import { AddItemForm } from "common/components";
-import { Todolist } from "./Todolist/Todolist";
+import { AddItemForm } from "common/components/index";
+import { Todolist } from "features/TodolistsList/ui/Todolist/Todolist";
 import { Navigate } from "react-router-dom";
-import { useActions } from "common/hooks";
+import { useActions } from "common/hooks/index";
 import { selectIsLoggedIn } from "features/auth/model/auth.selectors";
-import { selectTasks } from "features/TodolistsList/tasks.selectors";
-import { selectTodolists } from "features/TodolistsList/todolists.selectors";
-import { TaskStatuses } from "common/enums";
+import { selectTasks } from "features/TodolistsList/model/tasks/tasksSelector";
+import { selectTodolists } from "features/TodolistsList/model/todolists/todolists.selectors";
+import { TaskStatuses } from "common/enums/index";
 
 export const TodolistsList = () => {
   const todolists = useSelector(selectTodolists);
