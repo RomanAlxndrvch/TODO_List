@@ -13,13 +13,12 @@ type PropsType = {
   todolist: TodolistDomainType;
   tasks: TaskType[];
   changeFilter: (value: FilterValuesType, todolistId: string) => void;
-  addTask: (title: string, todolistId: string) => void;
   removeTodolist: (id: string) => void;
   changeTodolistTitle: (id: string, newTitle: string) => void;
 };
 
 export const Todolist = React.memo(function (props: PropsType) {
-  const { fetchTasks } = useActions(tasksThunks);
+  const { fetchTasks, addTask: addTaskThunk } = useActions(tasksThunks);
 
   useEffect(() => {
     fetchTasks(props.todolist.id);
@@ -27,9 +26,9 @@ export const Todolist = React.memo(function (props: PropsType) {
 
   const addTask = useCallback(
     (title: string) => {
-      props.addTask(title, props.todolist.id);
+      addTaskThunk({ title, todolistId: props.todolist.id });
     },
-    [props.addTask, props.todolist.id],
+    [addTaskThunk, props.todolist.id],
   );
 
   const removeTodolist = () => {
