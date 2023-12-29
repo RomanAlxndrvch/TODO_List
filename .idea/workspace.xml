@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="1.15">
+    <list default="true" id="0cb62651-d91f-4899-9993-b0a263339967" name="Changes" comment="1.18">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/ui/Todolist/Todolist.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/ui/Todolist/Todolist.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/ui/TodolistsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/ui/TodolistsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/TodolistsList/ui/Todolist/Task/Task.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/TodolistsList/ui/Todolist/Task/Task.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,11 @@
       <workItem from="1683422425467" duration="17000" />
       <workItem from="1703040118071" duration="4387000" />
       <workItem from="1703125781003" duration="5772000" />
-      <workItem from="1703362954687" duration="2584000" />
+      <workItem from="1703362954687" duration="2885000" />
+      <workItem from="1703816534346" duration="1193000" />
+      <workItem from="1703818863644" duration="402000" />
+      <workItem from="1703823837714" duration="1569000" />
+      <workItem from="1703825461685" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="16 34.05">
       <created>1680398356491</created>
@@ -280,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703134940433</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="1.18">
+      <option name="closed" value="true" />
+      <created>1703368485323</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1703368485323</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +332,7 @@
     <MESSAGE value="26.40" />
     <MESSAGE value="1.03" />
     <MESSAGE value="1.15" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.15" />
+    <MESSAGE value="1.18" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.18" />
   </component>
 </project>

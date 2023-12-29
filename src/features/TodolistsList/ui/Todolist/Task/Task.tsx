@@ -8,38 +8,34 @@ import { useActions } from "common/hooks/index";
 import { tasksThunks } from "features/TodolistsList/model/tasks/taskSlice";
 import { logDOM } from "@testing-library/react";
 
-type TaskPropsType = {
+type Props = {
   task: TaskType;
   todolistId: string;
 };
 
-export const Task = React.memo((props: TaskPropsType) => {
+export const Task = React.memo(({ task, todolistId }: Props) => {
   const { removeTask, updateTask } = useActions(tasksThunks);
 
-  const removeTaskHandler = () => removeTask({ taskId: props.task.id, todolistId: props.todolistId });
+  const removeTaskHandler = () => removeTask({ taskId: task.id, todolistId: todolistId });
 
   const changeTaskStatusHandler = (e: ChangeEvent<HTMLInputElement>) => {
     let newIsDoneValue = e.currentTarget.checked;
     updateTask({
-      taskId: props.task.id,
-      todolistId: props.todolistId,
+      taskId: task.id,
+      todolistId: todolistId,
       domainModel: { status: newIsDoneValue ? TaskStatuses.Completed : TaskStatuses.New },
     });
   };
 
-  const titleChangeHandler = (newValue: string) => {
-    updateTask({ taskId: props.task.id, todolistId: props.todolistId, domainModel: { title: newValue } });
+  const titleChangeHandler = (title: string) => {
+    updateTask({ taskId: task.id, todolistId: todolistId, domainModel: { title } });
   };
 
   return (
-    <div key={props.task.id} className={props.task.status === TaskStatuses.Completed ? "is-done" : ""}>
-      <Checkbox
-        checked={props.task.status === TaskStatuses.Completed}
-        color="primary"
-        onChange={changeTaskStatusHandler}
-      />
+    <div key={task.id} className={task.status === TaskStatuses.Completed ? "is-done" : ""}>
+      <Checkbox checked={task.status === TaskStatuses.Completed} color="primary" onChange={changeTaskStatusHandler} />
 
-      <EditableSpan value={props.task.title} onChange={titleChangeHandler} />
+      <EditableSpan value={task.title} onChange={titleChangeHandler} />
       <IconButton onClick={removeTaskHandler}>
         <Delete />
       </IconButton>
